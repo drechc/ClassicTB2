@@ -46,6 +46,15 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+#msgcomposeWindow:-moz-lwtheme {
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#attachmentBucket {
+  width: 15em;
+}
+
 /* ::::: primary toolbar buttons ::::: */
  
 .toolbarbutton-1 {
@@ -311,6 +320,12 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
 
 /* ::::: special toolbar colors ::::: */
 
+#MsgHeadersToolbar {
+  color: -moz-DialogText;
+  text-shadow: none;
+  background-color: -moz-Dialog;
+}
+
 #appcontent {
   border-top: 1px solid ThreeDShadow;
   border-left: 1px solid ThreeDShadow;
@@ -322,7 +337,18 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   border-bottom: none;
 }
 
+#attachmentBucketSize {
+  color: #888a85;
+}
+
 /* ::::: attachment reminder ::::: */
+
+#attachmentNotificationBox > notification > .notification-inner {
+  border-top: 1px solid ThreeDShadow;
+  border-right: 1px solid ThreeDHighlight;
+  border-left: 1px solid ThreeDShadow;
+  border-bottom: none;
+}
 
 #attachmentNotificationBox > notification .messageImage {
   width: 24px;
@@ -345,8 +371,7 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
 
 /* XXX I should really have a selector rule here to select just .listcell-icon objects underneath the attachmentList listbox */
 
-.listcell-icon
-{
+.listcell-icon {
   -moz-margin-start: 2px;
   margin-top: 2px;
 }
@@ -356,10 +381,10 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   border-left: none;
   border-right: none;
   -moz-border-top-colors: ThreeDHighlight;
+  background-color: ThreeDFace;
 }
 
 #msgSubject {
-  margin-top: 0px;
   margin-bottom: 4px;
 }
 
@@ -371,18 +396,25 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   
 #addressingWidget {
   -moz-user-focus: none;
+  -moz-appearance: none;
   width: 0;
-}  
+  border: none;
+  background-color: transparent;
+}
 
-#typecol-addressingWidget {
-  min-width: 9em;
-  border-right: 1px solid #CACAFF;
+#addressingWidget listboxbody {
+  margin: 1px 0;
+}
+
+#textcol-addressingWidget {
+  border: 1px solid threedshadow;
+  background-color: -moz-field;
 }
 
 .addressingWidgetItem,
 .dummy-row {
-  border: none !important;
-  background-color: inherit !important;
+  background-color: transparent !important;
+  border-width: 0;
   color: inherit !important;
 }
 
@@ -391,13 +423,9 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   padding: 0px;
 }
 
-.addressingWidgetCell:first-child {
-  border-top: none;
-}
-
+.addressingWidgetCell:first-child,
 .dummy-row-cell:first-child {
-  border-top: none;
-  border-bottom: 1px solid #CACAFF;
+  border-bottom: none;
 }
 
 .person-icon {
@@ -405,8 +433,36 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
   list-style-image: url("chrome://messenger/skin/addressbook/icons/abcard.png");
 }
 
-.aw-menulist > dropmarker {
-  height: 11px; 
+.aw-menulist {
+  -moz-binding: url("chrome://global/content/bindings/menulist.xml#menulist");
+  -moz-appearance: menulist;
+  -moz-box-align: stretch;
+  margin: 1px 0;
+  -moz-margin-start: 7px;
+  list-style-image: none;
+}
+
+.aw-menulist > .menulist-label-box {
+  margin: 0;
+}
+
+/* set the dropmarker at the beginning of the aw-menulist */
+.aw-menulist:-moz-locale-dir(ltr),
+.aw-menulist > .menulist-label-box:-moz-locale-dir(rtl) {
+  direction: rtl; 
+}
+
+.aw-menulist:-moz-locale-dir(rtl),
+.aw-menulist > .menulist-label-box:-moz-locale-dir(ltr) {
+  direction: ltr; 
+}
+
+.aw-menulist > .menulist-label-box > .menulist-icon {
+  -moz-margin-start: 0;
+}
+
+.aw-menulist > .menulist-label-box > .menulist-label {
+  margin: 0 1px !important;
 }
 
 #MsgHeadersToolbar {
@@ -415,7 +471,16 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
 
 /* ::::: format toolbar ::::: */
 
-#FormatToolbar > toolbarbutton {
+#FormatToolbox {
+  border-top-width: 0;
+  background-color: -moz-Dialog;
+}
+
+#FormatToolbar {
+  border-top: 1px solid ThreeDHighlight !important;
+}
+
+toolbarbutton.formatting-button {
   list-style-image: url("chrome://messenger/skin/messengercompose/format-buttons.png");
 }
  
@@ -691,6 +756,14 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
 }
 
 /* ::::: address book sidebar ::::: */
+
+#sidebar-box sidebarheader {
+  -moz-appearance: toolbox;
+  color: -moz-DialogText;
+  text-shadow: none;
+  background-color: -moz-Dialog;
+}
+
 .ab-closebutton {
   list-style-image: url("chrome://messenger/skin/icons/close-button.png");
   -moz-image-region: rect(0 16px 16px 0);
@@ -713,4 +786,8 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
 
 #sidebar {
   background-color: Window;
+}
+
+#sidebar-splitter {
+  background-color: ThreeDFace;
 }

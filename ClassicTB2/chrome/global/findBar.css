@@ -22,13 +22,6 @@
   -moz-image-region: rect(0px, 42px, 14px, 28px);
 }
 
-findbar {
-  border-top: 2px solid;
-  -moz-border-top-colors: ThreeDShadow ThreeDHighlight;
-  padding-bottom: 1px;
-  min-width: 1px;
-}
-
 /* find-next button */
 
 .findbar-find-next {
@@ -99,16 +92,16 @@ findbar {
 }
 
 .find-status-icon[status="notfound"] {
-  list-style-image: url("chrome://global/skin/icons/notfound.png");
+  list-style-image: url("chrome://global/skin/icons/information-16.png");
 }
 
 .findbar-textbox[status="notfound"] {
-  -moz-box-shadow: 0 0 0 1em #f66 inset;
+  box-shadow: 0 0 0 1em #f66 inset;
   color: white;
 }
 
 .findbar-textbox[flash="true"] {
-  -moz-box-shadow: 0 0 0 1em yellow inset;
+  box-shadow: 0 0 0 1em yellow inset;
   color: black;
 }
 

@@ -1,20 +1,20 @@
+@namespace html url("http://www.w3.org/1999/xhtml");
+
 /* ::::: BUTTONS ::::: */
 
-.larger-button {
-  font-size: 1.1em;
+.important-button {
+  font-weight: bold;
 }
 
-.smaller-button {
-  font-size: 0.85em;
+/* Set the order of the buttons to: (stop|re-test), (continue|create account), cancel */
+#stop_button, #half-manual-test_button {
+  -moz-box-ordinal-group: 1;
 }
-
-#back_button {
-  border: none;
-  -moz-appearance: none;
-  color: -moz-nativehyperlinktext;
-  text-decoration: underline;
-  background-color: inherit;
-  cursor: pointer;
+#next_button, #create_button {
+  -moz-box-ordinal-group: 2;
+}
+#cancel_button {
+  -moz-box-ordinal-group: 3;
 }
 
 .errordescription {
@@ -22,7 +22,7 @@
   margin-top: 3px;
 }
 
-.initialDesc {
+.initialDesc, .columnHeader {
   margin-top: 2px;
   color: GrayText;
 }
@@ -55,10 +55,10 @@ window {
   padding: 14px;
 }
 
-vbox.icon {
-  width: 22px;
-  height: 22px;
-  background-repeat: no-repeat;
+image.warningicon {
+  width: 16px;
+  height: 16px;
+  background: url("chrome://global/skin/icons/warning-16.png") no-repeat;
 }
 
 image.insecureLarry {
@@ -106,7 +106,7 @@ vbox.icon[state='weak'] {
 
 .warning {
   padding: 2em;
-  -moz-border-radius: 10px;
+  border-radius: 10px;
   background-color: #772222;
   border: 1px solid threedshadow;
 }
@@ -193,10 +193,6 @@ menulist.host {
   margin-top: 4px !important;
 }
 
-/* Missing:
- * textbox[disabled="true"]
- */
-
 .technical_details {
   cursor: pointer;
   margin: 0px;
@@ -209,12 +205,10 @@ menulist.host {
 }
 
 label.autoconfigLabel {
-  width: 80px;
   text-align: right;
 }
 
 label.textbox-label {
-  width: 58px;
   text-align: right;
 }
 
@@ -227,6 +221,33 @@ menulist[disabled="true"] {
   color: -moz-DialogText;
 }
 
+textbox.padded html|*.textbox-input:-moz-placeholder {
+  font-style: normal;
+}
+
+/* status area */
+
+#status_area[status=loading] #status_msg {
+  font-weight: bold;
+}
+
+#status_area[status=error] #status_msg {
+  font-weight: bold;
+}
+
+#status_area[status=error] #status_img_before {
+  background: url("chrome://global/skin/icons/warning-16.png") no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+#status_area[status=loading] #status_img_after {
+  background: url("chrome://global/skin/icons/loading_16.png") no-repeat;
+  width: 16px;
+  height: 16px;
+}
+
+
 .menulist-dropmarker[disabled="true"] {
   visibility: hidden;
 }
@@ -237,4 +258,25 @@ textbox.port[disabled="true"] {
 
 #incoming_protocol[disabled="true"] {
   padding-left: 6px;
+}
+
+#initialSettings, #status_area {
+  margin-bottom: 1em;
+}
+#result_area, #result_imappop {
+  margin-bottom: 1.5em;
+}
+#manual-edit_area {
+  margin-bottom: 2em;
+}
+
+#status_msg {
+  min-height: 2em;
+}
+
+#incoming_hostname {
+  width: 15em;
+}
+#incoming_username {
+  width: 10em;
 }

@@ -1,5 +1,4 @@
-/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*-
- * ***** BEGIN LICENSE BLOCK *****
+/* ***** BEGIN LICENSE BLOCK *****
  * Version: MPL 1.1/GPL 2.0/LGPL 2.1
  *
  * The contents of this file are subject to the Mozilla Public License Version
@@ -12,15 +11,15 @@
  * for the specific language governing rights and limitations under the
  * License.
  *
- * The Original Code is Thunderbird RSS Subscription CSS
+ * The Original Code is aboutSupport.css.
  *
  * The Initial Developer of the Original Code is
- * The Mozilla Foundation.
- * Portions created by the Initial Developer are Copyright (C) 2005
+ * Mozilla Foundation.
+ * Portions created by the Initial Developer are Copyright (C) 2011
  * the Initial Developer. All Rights Reserved.
  *
  * Contributor(s):
- *   Scott MacGregor <mscott@mozilla.org>
+ *   Siddharth Agarwal <sid.bugzilla@gmail.com>
  *
  * Alternatively, the contents of this file may be used under the terms of
  * either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -34,41 +33,18 @@
  * the provisions above, a recipient may use your version of this file under
  * the terms of any one of the MPL, the GPL or the LGPL.
  *
- * ***** END LICENSE BLOCK ****** */
+ * ***** END LICENSE BLOCK ***** */
 
-/* ::::: Feed Subscription UI icons :::::: */
-
-#subscriptionsDialog { 
-  padding: 0px;
+.gray-text {
+  color: GrayText;
 }
 
-#contentPane {
-  margin: 9px 8px 5px;
+.thead-level2 > th {
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
 }
 
-#subscriptionChildren::-moz-tree-image(folderNameCol) {
-  -moz-margin-end: 2px;
-  list-style-image: url("chrome://messenger-newsblog/skin/icons/rss-feed.png");
-  -moz-image-region: rect(0 16px 16px 0);
-}
-
-#subscriptionChildren::-moz-tree-image(folderNameCol, container) {
-  list-style-image: url("chrome://messenger/skin/icons/folder.png");
-  -moz-image-region: rect(0 16px 16px 0);
-}
-
-#subscriptionChildren::-moz-tree-image(folderNameCol, container, open) {
-  -moz-image-region: rect(0 32px 16px 16px);
-}
-
-#rssFeedInfoBox {
-  border: 1px solid ThreeDShadow;
-  border-radius: 0px;
-  margin: 4px;
-  padding: 0px;
-}
-
-#backgroundBox {
-  background-color: #FFFFFF; 
-  opacity: 0.5;
+td.data-private {
+  background-color: infobackground;
+  color: infotext;
 }

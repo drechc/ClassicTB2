@@ -46,8 +46,17 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+#messagepanebox {
+  text-shadow: none;
+  background-color: -moz-dialog;
+}
+
+#mail-toolbox {
+  -moz-appearance: toolbox;
+}
+
 /* ::::: message header borders ::::: */
 
-#msgHeaderView {
-  border: 1px outset ThreeDFace !important;
+.main-header-area {
+  border-top: 2px groove ThreeDFace;
 }

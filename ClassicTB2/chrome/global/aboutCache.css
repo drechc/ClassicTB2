@@ -1,5 +1,4 @@
-/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*-
- * ***** BEGIN LICENSE BLOCK *****
+/* ***** BEGIN LICENSE BLOCK *****
  * Version: MPL 1.1/GPL 2.0/LGPL 2.1
  *
  * The contents of this file are subject to the Mozilla Public License Version
@@ -12,15 +11,14 @@
  * for the specific language governing rights and limitations under the
  * License.
  *
- * The Original Code is Thunderbird RSS Subscription CSS
+ * The Original Code is mozilla.org code.
  *
  * The Initial Developer of the Original Code is
- * The Mozilla Foundation.
- * Portions created by the Initial Developer are Copyright (C) 2005
+ * Steffen Wilberg <steffen.wilberg@web.de>.
+ * Portions created by the Initial Developer are Copyright (C) 2010
  * the Initial Developer. All Rights Reserved.
  *
  * Contributor(s):
- *   Scott MacGregor <mscott@mozilla.org>
  *
  * Alternatively, the contents of this file may be used under the terms of
  * either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -34,41 +32,67 @@
  * the provisions above, a recipient may use your version of this file under
  * the terms of any one of the MPL, the GPL or the LGPL.
  *
- * ***** END LICENSE BLOCK ****** */
+ * ***** END LICENSE BLOCK ***** */
 
-/* ::::: Feed Subscription UI icons :::::: */
-
-#subscriptionsDialog { 
-  padding: 0px;
+h2 {
+  margin-top: 2em;
 }
 
-#contentPane {
-  margin: 9px 8px 5px;
+table {
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 0.5em 0;
+  border-radius: 10px;
 }
 
-#subscriptionChildren::-moz-tree-image(folderNameCol) {
-  -moz-margin-end: 2px;
-  list-style-image: url("chrome://messenger-newsblog/skin/icons/rss-feed.png");
-  -moz-image-region: rect(0 16px 16px 0);
+#disk,
+#memory,
+#offline {
+  background-color: rgba(0, 0, 0, .1);
 }
 
-#subscriptionChildren::-moz-tree-image(folderNameCol, container) {
-  list-style-image: url("chrome://messenger/skin/icons/folder.png");
-  -moz-image-region: rect(0 16px 16px 0);
+th {
+  width: 14em;
+  white-space: nowrap;
+  text-align: end;
 }
 
-#subscriptionChildren::-moz-tree-image(folderNameCol, container, open) {
-  -moz-image-region: rect(0 32px 16px 16px);
+td {
+  font-family: -moz-fixed;
+  word-wrap: break-word;
 }
 
-#rssFeedInfoBox {
-  border: 1px solid ThreeDShadow;
-  border-radius: 0px;
-  margin: 4px;
-  padding: 0px;
+#col-key {
+  width: 60%;
 }
 
-#backgroundBox {
-  background-color: #FFFFFF; 
-  opacity: 0.5;
+#col-dataSize,
+#col-fetchCount,
+#col-lastModified,
+#col-expires {
+  width: 13%;
+}
+
+#entries > tbody > tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, .03);
+}
+
+#entries > tbody > tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, .06);
+}
+
+#entries > tbody > tr > td {
+  padding: .5em 0;
+  text-align: center;
+}
+
+#entries > thead > tr > th {
+  text-align: center;
+  white-space: normal;
+}
+
+#entries > thead > tr > th:first-child,
+#entries > tbody > tr > td:first-child {
+  text-align: start;
 }

@@ -1,5 +1,4 @@
-/* -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 2 -*-
- * ***** BEGIN LICENSE BLOCK *****
+/* ***** BEGIN LICENSE BLOCK *****
  * Version: MPL 1.1/GPL 2.0/LGPL 2.1
  *
  * The contents of this file are subject to the Mozilla Public License Version
@@ -12,15 +11,15 @@
  * for the specific language governing rights and limitations under the
  * License.
  *
- * The Original Code is Thunderbird RSS Subscription CSS
+ * The Original Code is Mozilla Thunderbird
  *
  * The Initial Developer of the Original Code is
- * The Mozilla Foundation.
- * Portions created by the Initial Developer are Copyright (C) 2005
+ *   Mozilla Messaging
+ * Portions created by the Initial Developer are Copyright (C) 2011
  * the Initial Developer. All Rights Reserved.
  *
  * Contributor(s):
- *   Scott MacGregor <mscott@mozilla.org>
+ *  Jim Porter <squibblyflabbetydoo@gmail.com>
  *
  * Alternatively, the contents of this file may be used under the terms of
  * either the GNU General Public License Version 2 or later (the "GPL"), or
@@ -34,41 +33,55 @@
  * the provisions above, a recipient may use your version of this file under
  * the terms of any one of the MPL, the GPL or the LGPL.
  *
- * ***** END LICENSE BLOCK ****** */
+ * ***** END LICENSE BLOCK ***** */
 
-/* ::::: Feed Subscription UI icons :::::: */
+/* styles for the attachment list */
 
-#subscriptionsDialog { 
-  padding: 0px;
+.attachmentcell-icon {
+  padding: 1px;
 }
 
-#contentPane {
-  margin: 9px 8px 5px;
+.attachmentcell-name,
+.attachmentcell-size {
+  padding-top: 1px;
 }
 
-#subscriptionChildren::-moz-tree-image(folderNameCol) {
-  -moz-margin-end: 2px;
-  list-style-image: url("chrome://messenger-newsblog/skin/icons/rss-feed.png");
-  -moz-image-region: rect(0 16px 16px 0);
+.attachmentcell-size {
+  color: GrayText;
 }
 
-#subscriptionChildren::-moz-tree-image(folderNameCol, container) {
-  list-style-image: url("chrome://messenger/skin/icons/folder.png");
-  -moz-image-region: rect(0 16px 16px 0);
+attachmentlist[orient="horizontal"] > attachmentitem {
+  pointer-events: none;
 }
 
-#subscriptionChildren::-moz-tree-image(folderNameCol, container, open) {
-  -moz-image-region: rect(0 32px 16px 16px);
+attachmentlist[orient="horizontal"] .attachmentcell-icon,
+attachmentlist[orient="horizontal"] .attachmentcell-nameselection {
+  pointer-events: auto;
 }
 
-#rssFeedInfoBox {
-  border: 1px solid ThreeDShadow;
-  border-radius: 0px;
-  margin: 4px;
-  padding: 0px;
+attachmentlist:focus > attachmentitem[selected="true"][current="true"] .attachmentcell-nameselection {
+  outline: 1px dotted #F3D982;
 }
 
-#backgroundBox {
-  background-color: #FFFFFF; 
-  opacity: 0.5;
+attachmentlist:focus > attachmentitem[current="true"] .attachmentcell-nameselection {
+  outline: 1px dotted;
+  outline-offset: -1px;
+}
+
+attachmentitem[selected="true"] .attachmentcell-nameselection {
+  background-color: -moz-CellHighlight;
+  color: -moz-CellHighlightText;
+}
+
+attachmentlist:focus > attachmentitem[selected="true"] .attachmentcell-nameselection {
+  background-color: Highlight;
+  color: HighlightText;
+}
+
+attachmentitem[selected="true"] .attachmentcell-icon {
+  filter: url("chrome://messenger/skin/imageFilters.svg#selected");
+}
+
+attachmentlist:focus > attachmentitem[selected="true"] .attachmentcell-icon {
+  filter: url("chrome://messenger/skin/imageFilters.svg#selected-focus");
 }
