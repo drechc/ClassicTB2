@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
+<?xml-stylesheet type="text/css" href="chrome://communicator/skin/"?>
+
+<!DOCTYPE window [
+<!ENTITY % ClassicTB2optDTD SYSTEM "chrome://ClassicTB2opt/locale/preferences.dtd">
+%ClassicTB2optDTD;
+]>
+
+
+<prefwindow id="ClassicTB2opt_Preferences"
+            title="&ClassicTB2opt_dialog.title;"
+            windowtype="ext:options"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <prefpane id="ClassicTB2opt_Preferences_pane">
+    <preferences>
+      <preference id="ClassicTB2opt_pref_ShowMsgButtons"
+                  name="extensions.ClassicTB2opt.ShowMsgButtons" type="bool"/>
+    </preferences>
+
+    <checkbox id="ClassicTB2opt_checkboxShowMsgButtons"
+              preference="ClassicTB2opt_pref_ShowMsgButtons"
+              label="&ClassicTB2opt_checkbox.ShowMsgButtons.caption;"/>
+  </prefpane>
+</prefwindow>
