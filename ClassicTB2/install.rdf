@@ -5,18 +5,20 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{2A95E724-F74E-46D3-93FD-3E9850382E52}</em:id>
-    <em:version>1.0.1</em:version>
+    <em:version>1.0.2</em:version>
     <em:type>4</em:type>
     <em:name>Classic TB2</em:name>
     <em:internalName>ClassicTB2</em:internalName>
-    <em:description>Theme using mostly TB2 icons plus the best of TB1.5, TB3, and TB6.  Based on TB3 Classic by Zamula, and ClassicReloaded by Christoph Wirsching.</em:description>
+    <em:description>Theme using mostly TB2 icons plus the best of TB1.5, TB3, and TB6.</em:description>
     <em:creator>Corey Drechsler</em:creator>
+    <em:contributor>TB3 Classic by Zamula</em:contributor>
+    <em:contributor>ClassicReloaded by Christoph Wirsching</em:contributor>
 
     <em:targetApplication>
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>6.0</em:minVersion>
-        <em:maxVersion>7.*</em:maxVersion>
+        <em:maxVersion>9.*</em:maxVersion>
       </Description>
     </em:targetApplication>
    
