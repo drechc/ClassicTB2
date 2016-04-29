@@ -82,6 +82,10 @@ toolbox[labelalign="end"] > toolbar[mode="full"] deck .toolbarbutton-text {
   text-align: start;
 }
 
+#compose-toolbox, #headers-box {
+  border-bottom: 1px solid threedshadow;
+}
+
 #button-send {
   list-style-image: url("chrome://messenger/skin/messengercompose/compose-toolbar.png");
   -moz-image-region: rect(0px 24px 24px 0px);
@@ -327,9 +331,6 @@ toolbar[iconsize="small"] #paste-button[disabled="true"] {
 }
 
 #appcontent {
-  border-top: 1px solid ThreeDShadow;
-  border-left: 1px solid ThreeDShadow;
-  border-right: 1px solid ThreeDHighlight;
 }
 
 #attachmentbucket-sizer {
@@ -758,26 +759,26 @@ toolbarbutton.formatting-button {
 /* ::::: address book sidebar ::::: */
 
 #sidebar-box sidebarheader {
-  -moz-appearance: toolbox;
+  -moz-appearance: none;
   color: -moz-DialogText;
   text-shadow: none;
   background-color: -moz-Dialog;
 }
 
 .ab-closebutton {
-  list-style-image: url("chrome://messenger/skin/icons/close-button.png");
-  -moz-image-region: rect(0 16px 16px 0);
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0px, 56px, 14px, 42px);
   -moz-appearance: none;
   border: none !important;
   padding: 2px;
 }
 
 .ab-closebutton:hover {
-  -moz-image-region: rect(0 32px 16px 16px);
+  -moz-image-region: rect(0px, 28px, 14px, 14px);
 }
 
 .ab-closebutton:hover:active {
-  -moz-image-region: rect(0 48px 16px 32px);
+  -moz-image-region: rect(0px, 42px, 14px, 28px);
 }
 
 .ab-closebutton > .toolbarbutton-icon {
@@ -785,7 +786,7 @@ toolbarbutton.formatting-button {
 }
 
 #sidebar {
-  background-color: Window;
+  background-color: -moz-Dialog;
 }
 
 #sidebar-splitter {

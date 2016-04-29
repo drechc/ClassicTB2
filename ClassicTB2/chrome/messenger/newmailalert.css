@@ -103,11 +103,11 @@
 }
 
 #closeButton {
-  list-style-image: url("chrome://messenger/skin/icons/close-button.png");
-  -moz-image-region: rect(0px, 16px, 16px, 0px);
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0px, 56px, 14px, 42px);
   -moz-appearance: none;
   border: none !important;
-  padding: 2px 0px 0px;
+  padding: 4px 2px 2px;
 }
 
 #closeButton > .toolbarbutton-icon {
@@ -115,9 +115,9 @@
 }
 
 #closeButton:hover {
-  -moz-image-region: rect(0px, 32px, 16px, 16px);
+  -moz-image-region: rect(0px, 28px, 14px, 14px);
 }
 
 #closeButton:hover:active {
-  -moz-image-region: rect(0px, 48px, 16px, 32px);
+  -moz-image-region: rect(0px, 42px, 14px, 28px);
 }

@@ -1,3 +1,8 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
 @import url("chrome://messenger/content/quickFilterBar.css");
 
 /* :::: Filter Tab Bar Button :::: */
@@ -66,14 +71,14 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
 }
 
 #quick-filter-bar-main-bar:-moz-system-metric(windows-default-theme) {
-  background: -moz-linear-gradient(top, #f2f7fd 0, #e9f2fc 12px, #e3eefb 12px, #e3eefb 100%);
+  background-color: ThreeDFace;
   border-top: 1px solid #fff;
   border-bottom: 2px solid;
   -moz-border-bottom-colors: #9196a2 #fff;
 }
 
 #quick-filter-bar-expando:-moz-system-metric(windows-default-theme) {
-  background: #f2f6fb;
+  background-color: ThreeDFace;
 }
 
 #quick-filter-bar-tab-bar,

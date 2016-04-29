@@ -31,10 +31,19 @@
   -moz-box-ordinal-group: 20;
 }
 
+#tabs-toolbar[collapsed=true] {
+  visibility: inherit;
+  max-height: 1px;
+  min-height: 1px;
+}
+#tabs-toolbar[collapsed=true] * {
+  visibility: hidden;
+}
+
 #mail-toolbar-menubar2 {
   -moz-box-ordinal-group: 10;
-  padding: 2px 0 0;
-  margin: 0 0 -2px;
+  padding: 0px 0 0;
+  margin: 0 0 0px;
 }
 
 .mail-toolbox,
@@ -49,6 +58,7 @@
 .mail-toolbox > toolbar:-moz-lwtheme,
 .contentTabToolbox > toolbar:-moz-lwtheme {
   border-top: none;
+  border-bottom: 1px solid threedshadow;
 }
 
 #mail-bar3 {
@@ -580,21 +590,9 @@ toolbar[iconsize="small"] #button-nextUnread:hover {
 
 toolbar[iconsize="small"] #button-nextUnread[disabled] {
   -moz-image-region: rect(32px 208px 48px 192px) !important;
-
-
-
-
 }
 
 toolbar[iconsize="small"] #button-previousUnread {
-
-
-
-
-
-
-
-
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
   -moz-image-region: rect(0px 224px 16px 208px);
 }
@@ -606,19 +604,7 @@ toolbar[iconsize="small"] #button-previousUnread:hover {
 toolbar[iconsize="small"] #button-previousUnread[disabled] {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
   -moz-image-region: rect(32px 224px 48px 208px) !important;
-
-
-
-
 }
-
-
-
-
-
-
-
-
 
 toolbar[iconsize="small"] #button-mark {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
