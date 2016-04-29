@@ -757,3 +757,18 @@ mail-headerfield > .headerValue {
 #header-view-toolbox:-moz-locale-dir(rtl) {
   float: left;
 }
+
+
+/* Hide buttons from the message pane */
+#header-view-toolbox, #otherActionsButton {
+  display: none;
+}
+
+/* Remove the extra space left from the buttons */
+/* and squeeze the headers a little closer */
+#expandedHeaderRows {
+  padding-top: 0px;
+}
+.headerValue {
+  line-height: 1.25em;
+}
