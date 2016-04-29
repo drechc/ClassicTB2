@@ -4,3 +4,6 @@ skin	messenger		ClassicTB2 jar:chrome/classic.jar!/messenger/
 skin	global			ClassicTB2 jar:chrome/classic.jar!/global/
 skin	messenger-newsblog	ClassicTB2 jar:chrome/classic.jar!/messenger-newsblog/
 skin	mozapps			ClassicTB2 jar:chrome/classic.jar!/mozapps/
+skin	calendar		ClassicTB2 jar:chrome/classic.jar!/calendar/
+skin	calendar-windows		ClassicTB2 jar:chrome/classic.jar!/calendar/
+skin	lightning		ClassicTB2 jar:chrome/classic.jar!/lightning/
