@@ -1,3 +1,4 @@
+
 /* ***** BEGIN LICENSE BLOCK *****
  * Version: MPL 1.1/GPL 2.0/LGPL 2.1
  *
@@ -73,6 +74,7 @@
   -moz-border-image: url(icons/tab.png) 4 3 0 / 4px 3px 0 repeat stretch;
   height: 26px;
   border-radius: 0;
+  border-width: 0;
 }
 
 .tabmail-tab:not(:-moz-lwtheme):not([selected="true"]):hover {
@@ -118,6 +120,11 @@
                     hsla(0, 0%, 60%, .5) 80%);
 }
 
+.tab-content {
+  -moz-padding-start: 3px;
+  -moz-padding-end: 3px;
+}
+
 .tabmail-tab > .tab-image-middle {
   padding-top: 1px;
   -moz-padding-start: 1px;
@@ -161,6 +168,7 @@
 .tab-throbber {
   -moz-margin-end: 3px;
   margin-bottom: 1px;
+
   width: 16px;
   height: 16px;
 }
@@ -377,6 +385,10 @@ tabpanels {
   border: 0;
 }
 
+.contentTabInstance[disablechrome] .contentTabToolbox {
+  display: none;
+}
+
 .contentTabToolbox:not(:-moz-lwtheme) {
   height: 3px;
   border-bottom: 1px solid rgb(105, 105, 105);
@@ -387,3 +399,9 @@ tabpanels {
   background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5) 50%);
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+.contentTabToolbar {
+  height: 0px;
+  min-height: 0px;
+}
+
