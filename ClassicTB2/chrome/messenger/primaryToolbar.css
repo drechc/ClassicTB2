@@ -16,7 +16,6 @@
 #navigation-toolbox {
   -moz-appearance: none;
   border-top-width: 0;
-  background-color: transparent;
 }
 
 #tabs-toolbar {
@@ -34,6 +33,8 @@
 
 #mail-toolbar-menubar2 {
   -moz-box-ordinal-group: 10;
+  padding: 2px 0 0;
+  margin: 0 0 -2px;
 }
 
 .mail-toolbox,
