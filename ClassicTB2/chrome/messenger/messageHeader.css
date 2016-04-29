@@ -78,6 +78,16 @@
   -moz-box-align: baseline;
 }
 
+#expandedHeadersTopBox {
+  /* Use the HTML layout model to allow the message header toolbar to float to
+     the right of the From field. */
+  display: block;
+}
+
+#expandedBoxSpacer {
+  display: block;
+  height: 10px;
+}
 #otherActionsButton {
   margin-bottom: .1em;
   padding-top: 0px;
@@ -365,6 +375,10 @@ toolbar[iconsize="small"] .hdrTrashButton {
   -moz-appearance: none;
   -moz-box-pack: end;
   border-bottom-width: 0 !important;
+}
+
+#header-view-toolbar {
+  border-top-width: 0;
 }
 
 window[inlinetoolbox] #smallicons,
@@ -708,15 +722,17 @@ mail-headerfield > .headerValue {
 
 
 /* Hide buttons from the message pane */
-#header-view-toolbox, #otherActionsButton {
+#msgHeaderView:not([classicTB2showMsgButtons=true]) #header-view-toolbox,
+#msgHeaderView:not([classicTB2showMsgButtons=true]) #otherActionsButton,
+#msgHeaderView:not([classicTB2showMsgButtons=true]) #expandedBoxSpacer{
   display: none;
 }
 
 /* Remove the extra space left from the buttons */
 /* and squeeze the headers a little closer */
-#expandedHeaderRows {
+#msgHeaderView:not([classicTB2showMsgButtons=true]) #expandedHeaderRows{
   padding-top: 0px;
 }
-.headerValue {
+#msgHeaderView:not([classicTB2showMsgButtons=true]) .headerValue{
   line-height: 1.25em;
 }
