@@ -3,9 +3,6 @@ treechildren::-moz-tree-line {
   visibility: visible;
 }
 
-/* Hide the folder pane header (can use the view menu to switch) */
-#folderPaneHeader {visibility: collapse;}
-
 /* ::::: Folder Pane ::::: */
 
 .tabmail-tab[type="folder"] {
