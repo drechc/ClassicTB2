@@ -2,5 +2,5 @@
    - License, v. 2.0. If a copy of the MPL was not distributed with this
    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
-<!ENTITY ClassicTB2opt_dialog.title "Classic TB2 Preferences">
-<!ENTITY ClassicTB2opt_checkbox.ShowMsgButtons.caption "Show Buttons in Message Pane">
+<!ENTITY ClassicTB2opt_dialog.title "Préférences pour Classic TB2">
+<!ENTITY ClassicTB2opt_checkbox.ShowMsgButtons.caption "Montrer les boutons dans le panneau d’affichage des messages">

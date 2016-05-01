@@ -3,11 +3,7 @@
 <?xml-stylesheet type="text/css" href="chrome://global/skin/"?>
 <?xml-stylesheet type="text/css" href="chrome://communicator/skin/"?>
 
-<!DOCTYPE window [
-<!ENTITY % ClassicTB2optDTD SYSTEM "chrome://ClassicTB2opt/locale/preferences.dtd">
-%ClassicTB2optDTD;
-]>
-
+<!DOCTYPE window SYSTEM "chrome://ClassicTB2opt/locale/preferences.dtd">
 
 <prefwindow id="ClassicTB2opt_Preferences"
             title="&ClassicTB2opt_dialog.title;"
