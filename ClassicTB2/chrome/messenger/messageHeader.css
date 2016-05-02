@@ -122,7 +122,7 @@
 /* ::::: attachment view ::::: */
 
 #attachmentList {
-  margin: 0px;
+  margin: 0 2px 2px;
   background-color: -moz-Field;
   color: -moz-FieldText;
 }
@@ -193,6 +193,14 @@
 
 #attachmentView {
   border-top: 1px solid ThreeDShadow;
+}
+
+#attachment-splitter {
+  border-bottom: none;
+}
+
+#FindToolbar {
+  border-top: 1px solid ThreeDDarkShadow;
 }
 
 /* ::::: msg header captions ::::: */
