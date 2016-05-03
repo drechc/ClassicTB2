@@ -1,9 +1,6 @@
-/*
-# -*- Mode: Java; tab-width: 2; indent-tabs-mode: nil; c-basic-offset: 4 -*-
-# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/.
-*/
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 /* Global Styles */
 
@@ -113,6 +110,30 @@ radio[pane=paneAdvanced] {
   opacity: .5;
 }
 
+/* Cookies Manager */
+#cookiesChildren::-moz-tree-image(domainCol) {
+  width: 16px;
+  height: 16px;
+  margin: 0 2px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container) {
+  list-style-image: url("chrome://global/skin/icons/folder-item.png");
+  -moz-image-region: rect(0 32px 16px 16px);
+}
+
+#cookiesChildren::-moz-tree-image(domainCol, container, open) {
+  -moz-image-region: rect(16px 32px 32px 16px);
+}
+
+#cookieInfoBox {
+  border: 1px solid ThreeDShadow;
+  border-radius: 0;
+  margin: 4px;
+  padding: 0;
+}
+
 /* Attachments */
 
 body {
@@ -188,7 +209,7 @@ a {
   border: 1px solid rgba(0,0,0,0.5);
   border-radius: 2px;
   -moz-margin-start: 0.5ch;
-  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Main pane padding */
