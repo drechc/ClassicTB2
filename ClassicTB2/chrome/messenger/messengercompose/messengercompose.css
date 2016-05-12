@@ -148,13 +148,19 @@
 
 /* set the dropmarker at the beginning of the aw-menulist */
 .aw-menulist:-moz-locale-dir(ltr),
-.aw-menulist > .menulist-label-box:-moz-locale-dir(rtl) {
-  direction: rtl; 
+.aw-menulist > .menulist-label-box:-moz-locale-dir(rtl),
+.aw-menulist  .popup-internal-box:-moz-locale-dir(rtl) {
+  direction: rtl;
 }
 
 .aw-menulist:-moz-locale-dir(rtl),
-.aw-menulist > .menulist-label-box:-moz-locale-dir(ltr) {
-  direction: ltr; 
+.aw-menulist > .menulist-label-box:-moz-locale-dir(ltr),
+.aw-menulist .popup-internal-box:-moz-locale-dir(ltr) {
+  direction: ltr;
+}
+
+.aw-menulist {
+  text-align: end;
 }
 
 .aw-menulist > .menulist-label-box > .menulist-icon {
