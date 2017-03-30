@@ -1,4 +1,8 @@
-/* add back tree lines*/
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+ /* add back tree lines*/
 treechildren::-moz-tree-line {
   visibility: visible;
 }
@@ -37,13 +41,15 @@ treechildren::-moz-tree-image(folderNameCol, serverType-nntp) {
 
 /* ..... Feed ..... */
 
-.tabmail-tab[type="folder"][ServerType="rss"],
-treechildren::-moz-tree-image(folderNameCol, serverType-rss) {
+.tabmail-tab[type="folder"][IsFeedFolder="true"],
+treechildren::-moz-tree-image(folderNameCol, isFeedFolder-true) {
   list-style-image: url("chrome://messenger-newsblog/skin/icons/rss-feed.png");
   -moz-image-region: rect(0 16px 16px 0);
+  width: 16px;
+  height: 16px;
 }
 
-treechildren::-moz-tree-image(folderNameCol, serverType-rss, newMessages-true) {
+treechildren::-moz-tree-image(folderNameCol, isFeedFolder-true, newMessages-true) {
   -moz-image-region: rect(16px 16px 32px 0);
 }
 
