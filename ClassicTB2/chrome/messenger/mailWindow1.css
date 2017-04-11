@@ -650,7 +650,7 @@ tabpanels#tabpanelcontainer {
   -moz-appearance: menuimage !important;
 }
 #viewPickerPopup > menuitem > .menu-iconic-text {
-  margin-inline-start: 2px !important;
+  -moz-margin-start: 2px !important;
 }
 
 #viewPickerPopup > menuseparator {

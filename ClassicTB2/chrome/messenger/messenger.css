@@ -157,12 +157,12 @@ sidebarheader .toolbarbutton-text:not([value]) {
 }
 
 treechildren::-moz-tree-cell-text {
-  padding-inline-start: 5px;
+  -moz-padding-start: 5px;
 }
 
 @media not all and (-moz-windows-default-theme) {
   treechildren::-moz-tree-cell-text {
-    padding-inline-start: 4px !important;
+    -moz-padding-start: 4px !important;
   }
 }
 
@@ -186,5 +186,5 @@ menupopup[type="folder"] > menuitem {
 }
 
 menulist.folderMenuItem > .menulist-label-box > .menulist-label {
-  margin-inline-start: 2px !important;
+  -moz-margin-start: 2px !important;
 }
