@@ -39,7 +39,7 @@ var classicTB2options =
         window.removeEventListener("load",classicTB2options.onload,false);
         
         /* Check that the theme is being used */
-        if (classicTB2options.themeName !== "ClassicTB2")
+        if ((classicTB2options.themeName !== "ClassicTB2") && (classicTB2options.themeName !== "ClassicTB2beta"))
             return;
 
 	    classicTB2options.prefsObserver.register();
@@ -54,4 +54,4 @@ var classicTB2options =
 
 window.addEventListener("load",classicTB2options.onLoad,false);
 
-//Components.classes["@mozilla.org/embedcomp/prompt-service;1"].getService(Components.interfaces.nsIPromptService).alert(null,"Classic TB2","test");
+//Services.prompt.alert(null,"Classic TB2",classicTB2options.themeName);
