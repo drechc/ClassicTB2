@@ -1,12 +1,11 @@
 "use strict";
 
+Components.utils.import("resource://gre/modules/Services.jsm");
+
 var classicTB2options =
 {
-    prefs: Components.classes["@mozilla.org/preferences-service;1"]
-          .getService(Components.interfaces.nsIPrefService).getBranch("extensions.ClassicTB2opt."),
-
-    themeName: Components.classes["@mozilla.org/preferences-service;1"]
-              .getService(Components.interfaces.nsIPrefBranch).getCharPref("general.skins.selectedSkin"),
+    prefs: Services.prefs.getBranch("extensions.ClassicTB2opt."),
+    themeName: Services.prefs.getCharPref("general.skins.selectedSkin"),
 
     /* Listen for changes to any preferences */
     prefsObserver:
