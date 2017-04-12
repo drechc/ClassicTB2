@@ -201,7 +201,7 @@ tabpanels {
 /* Tab DnD indicator */
 .tab-drop-indicator {
   list-style-image: url(chrome://messenger/skin/icons/tabDragIndicator.png);
-  margin-bottom: -11px;
+  margin-bottom: 0; /* Move up into tabs since menu is not below anymore */
 }
 
 /**
