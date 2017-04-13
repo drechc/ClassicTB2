@@ -397,6 +397,19 @@ toolbox[labelalign="end"] > toolbar[mode="full"] .toolbarbutton-1[type="menu"] {
   -moz-image-region: rect(48px 576px 72px 552px) !important;
 }
 
+#button-showconversation {
+  list-style-image: url("chrome://messenger/skin/icons/mail-toolbar.png");
+  -moz-image-region: rect(0px 624px 24px 600px);
+}
+
+#button-showconversation:hover {
+  -moz-image-region: rect(24px 624px 48px 600px);
+}
+
+#button-showconversation[disabled] {
+  -moz-image-region: rect(48px 624px 72px 600px) !important;
+}
+
 .button-appmenu {
   list-style-image: url("chrome://messenger/skin/icons/mail-toolbar.png");
   -moz-image-region: rect(0px 600px 24px 576px);
@@ -725,6 +738,19 @@ toolbar[iconsize="small"] #button-previousMsg:hover {
 
 toolbar[iconsize="small"] #button-previousMsg[disabled] {
   -moz-image-region: rect(32px 384px 48px 368px) !important;
+}
+
+toolbar[iconsize="small"] #button-showconversation {
+  list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
+  -moz-image-region: rect(0px 416px 16px 400px);
+}
+
+toolbar[iconsize="small"] #button-showconversation:hover {
+  -moz-image-region: rect(16px 416px 32px 400px);
+}
+
+toolbar[iconsize="small"] #button-showconversation[disabled] {
+  -moz-image-region: rect(32px 416px 48px 400px) !important;
 }
 
 toolbar[iconsize="small"] .button-appmenu {
