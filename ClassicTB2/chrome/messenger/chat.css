@@ -9,21 +9,18 @@
   overflow: auto;
 }
 .im-placeholder-box {
+  background: url("chrome://global/skin/icons/information-64.png") 1.1em 1.1em/64px 64px no-repeat;
   background-color: -moz-Field;
   color: -moz-FieldText;
   border: 1px solid ThreeDShadow;
   border-radius: 10px;
   padding: 1.1em;
-  -moz-padding-start: 20px;
+  -moz-padding-start: calc(1.1em + 64px + 1.1em);
   margin-left: 1em;
   margin-right: 1em;
 }
-.im-placeholder-image {
-  list-style-image: url("chrome://global/skin/icons/information-64.png");
-  -moz-margin-end: 1.2em;
-}
 .im-placeholder-innerbox {
-  max-width: 25em;
+  min-height: 64px;
 }
 .im-placeholder-title {
   margin: 0 1em 0.6em 0;
@@ -57,6 +54,10 @@ imconv[unread] {
 
 imconv[attention] {
   color: blue;
+}
+
+.conv-hbox {
+  -moz-box-align: center;
 }
 
 /* From instantbird/themes/blist.css */
@@ -117,7 +118,7 @@ imcontact[aliasing] .contactDisplayName {
 }
 
 
-/* From instantbird/themes/conversation.css */
+/* From im/themes/conversation.css */
 .browser {
   margin: 0 0;
 }
@@ -126,8 +127,12 @@ imcontact[aliasing] .contactDisplayName {
   margin: 0 0;
 }
 
+.convBox {
+  min-height: 135px;
+}
+
 .conv-top {
-  min-height: 115px;
+  min-height: 60px;
 }
 
 .conv-top-info {
@@ -140,16 +145,22 @@ imcontact[aliasing] .contactDisplayName {
   border-bottom: none;
 }
 
-.userIcon {
+.userIconHolder {
   border: 2px solid rgba(0,0,0,0.15);
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.userIcon,
+.userIconHolder {
   max-width: 48px;
   max-height: 48px;
   width: 48px;
   height: 48px;
 }
 
-.userIcon:not([src]) {
+.userIcon:not([src]),
+.userIconHolder:not([userIcon]) {
   display: none;
 }
 
@@ -221,6 +232,7 @@ imcontact[aliasing] .contactDisplayName {
   list-style-image: url('chrome://chat/skin/unknown.png');
 }
 
+/* corresponds to im/themes/conversation.css @media all and (min-height: 251px) */
 .statusImageStack,
 .displayNameAndstatusMessageStack {
   margin: 2px 2px;
@@ -249,7 +261,7 @@ imcontact[aliasing] .contactDisplayName {
   margin: 32px 0 0;
 }
 
-.userIcon[src] + .statusTypeIcon {
+.userIconHolder[userIcon] + .statusTypeIcon {
   margin-left: 32px;
 }
 
@@ -265,16 +277,80 @@ imcontact[aliasing] .contactDisplayName {
   border-right: solid 1px GrayText;
 }
 
+
+/* Animation copied from the find bar in Firefox - http://dxr.mozilla.org/mozilla-central/source/toolkit/themes/linux/global/findBar.css#7 */
+.conv-status-container {
+  display: block;
+  height: 20px;
+  padding: 3px;
+  border-bottom: 1px solid ThreeDShadow;
+  transition-property: margin-top, opacity, visibility;
+  transition-duration: 150ms, 150ms, 0s;
+  transition-timing-function: ease-in-out, ease-in-out, linear;
+}
+
+.conv-status-container[hidden] {
+  /* Override display:none to make the transition work. */
+  display: -moz-box;
+  visibility: collapse;
+  margin-top: -1em;
+  opacity: 0;
+  transition-delay: 0s, 0s, 150ms;
+}
 .conv-textbox {
-  margin: 0 0;
-  padding: 0 0;
-  -moz-box-sizing: content-box;
+  padding: 2px;
+  box-sizing: content-box;
+  border: 1px solid transparent;
+}
+
+
+.conv-textbox[invalidInput="true"] {
+  border-color: red;
 }
 
 .conv-textbox > .textbox-input-box {
   background: inherit;
 }
 
+.conv-counter {
+  color: #000;
+  background-color: rgba(246, 246, 246, 0.7);
+  -moz-border-start: 1px solid rgb(200, 200, 200);
+  border-top: 1px solid rgb(200, 200, 200);
+  /* Padding that gets flipped to margins in .conv-counter[value^="0"] to avoid the red border. */
+  font-size: 130%;
+  padding-top: 0;
+  padding-bottom: 1px;
+  -moz-padding-start: 5px;
+  -moz-padding-end: 6px;
+  margin: 0;
+}
+
+.conv-counter:-moz-locale-dir(ltr) {
+  border-top-left-radius: 3px;
+}
+
+.conv-counter:-moz-locale-dir(rtl) {
+  border-top-right-radius: 3px;
+}
+
+.conv-counter[value=""] {
+  display: none;
+}
+
+/* Negative counter values (user went over the character limit). */
+.conv-counter[value^="-"] {
+  color: red;
+}
+
+.conv-counter[value^="-"] {
+  margin-bottom: 1px;
+  /* The 6px padding-end from .conv-counter is split into a 1px margin-end (to avoid the border) and 5px padding-end (as regular padding). */
+  -moz-margin-end: 1px;
+  padding-top: 1px;
+  padding-bottom: 0;
+  -moz-padding-end: 5px;
+}
 
 
 .splitter {
@@ -468,7 +544,13 @@ toolbar[mode="text"] #statusTypeIcon > .toolbarbutton-icon {
 
 .conv-textbox {
   -moz-appearance: none;
-  border: none;
+  /* Right/left margins so the borders show up on all sides. */
+  margin: 0 1px 0 1px;
+}
+
+.conv-counter[value^="-"] {
+  -moz-margin-end: 2px;
+  -moz-padding-end: 4px;
 }
 
 #contextPane {
@@ -627,4 +709,10 @@ richlistitem[state="disconnected"] .accountStateIcon {
 #displayNameAndstatusMessageStack #displayName[editing] {
   margin-left: -2px;
   margin-bottom: 18px;
+}
+
+.tabmail-tab[type="chat"],
+.alltabs-item[type="chat"] {
+  list-style-image: url("chrome://messenger/skin/icons/mail-toolbar-small.png");
+  -moz-image-region: rect(0px 352px 16px 336px);
 }
