@@ -795,10 +795,17 @@ toolbar[iconsize="small"] .button-appmenu[disabled] {
   -moz-image-region: rect(0px 504px 24px 480px);
 }
 
+#folderPane-toolbar #locationFolders,
+#folderPane-toolbar > #folder-location-container,
+#folderPane-toolbar > #folderpane-mode-selector {
+  -moz-box-flex: 1;
+}
+
 /* Force the folder location and mail view items to fit in the available width
    in the Customize Toolbar dialog. */
 #palette-box #locationFolders,
 #palette-box #folder-location-container,
+#palette-box #folderpane-mode-selector,
 #palette-box #viewPicker {
   -moz-box-flex: 1;
 }

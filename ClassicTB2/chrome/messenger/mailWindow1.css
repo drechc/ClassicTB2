@@ -849,3 +849,13 @@ tabpanels#tabpanelcontainer {
 #viewPickerPopup > menuseparator {
   -moz-appearance: menuseparator;
 }
+
+/* Folder Pane toolbar borders */
+#folderPane-toolbar {
+  border-bottom-width: 1px !important;
+  border-bottom-color: ThreeDShadow;
+}
+
+#folderPane-toolbar {
+  border-top-style: none;
+}
