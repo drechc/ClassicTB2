@@ -25,8 +25,8 @@
   color: -moz-FieldText;
 }
 
-#mailContent {
-  -moz-appearance: none;
+#messengerBox {
+  color: -moz-DialogText;
   background-color: -moz-Dialog;
 }
 

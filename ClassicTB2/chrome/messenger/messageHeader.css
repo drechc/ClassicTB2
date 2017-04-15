@@ -161,6 +161,12 @@
   border-bottom: none;
 }
 
+#attachmentBar,
+#FindToolbar {
+  color: -moz-dialogtext;
+  background-color: -moz-Dialog;
+}
+
 #FindToolbar {
   border-top: 1px solid ThreeDDarkShadow;
 }
