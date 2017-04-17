@@ -1,0 +1,15 @@
+skin editor TB3Classic jar:chrome/classic.jar!/editor/
+skin global TB3Classic jar:chrome/classic.jar!/global/ os!=WINNT
+skin communicator TB3Classic jar:chrome/classic.jar!/communicator/
+skin messenger TB3Classic jar:chrome/classic.jar!/messenger/ os=WINNT osversion<6
+skin global TB3Classic jar:chrome/classic.jar!/global/ os=WINNT osversion<6
+skin mozapps TB3Classic jar:chrome/classic.jar!/mozapps/ os!=WINNT
+skin messenger-newsblog TB3Classic jar:chrome/classic.jar!/messenger-newsblog/ os!=WINNT
+skin messenger-newsblog TB3Classic jar:chrome/classic.jar!/aero/messenger-newsblog/ os=WINNT osversion>=6
+skin messenger TB3Classic jar:chrome/classic.jar!/messenger/ os!=WINNT
+skin messenger TB3Classic jar:chrome/classic.jar!/aero/messenger/ os=WINNT osversion>=6
+skin mozapps TB3Classic jar:chrome/classic.jar!/aero/mozapps/ os=WINNT osversion>=6
+skin messenger-newsblog TB3Classic jar:chrome/classic.jar!/messenger-newsblog/ os=WINNT osversion<6
+skin mozapps TB3Classic jar:chrome/classic.jar!/mozapps/ os=WINNT osversion<6
+skin global TB3Classic jar:chrome/classic.jar!/aero/global/ os=WINNT osversion>=6
+skin tb3-classic TB3Classic jar:chrome/classic.jar!/tb3-classic/
