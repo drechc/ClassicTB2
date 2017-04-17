@@ -38,9 +38,6 @@
 /* ===== messageHeader.css ==============================================
   == Styles for the header toolbars of a mail message.
   ======================================================================= */
-  
- /* ::::: TB3 Classic Tweaks  ::::: */
-@import url("chrome://tb3-classic/skin/TB3Classic.css"); 
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
