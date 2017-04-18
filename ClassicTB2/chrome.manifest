@@ -27,8 +27,10 @@ override chrome://global/skin/icons/Warning-XP.png						chrome://icons-override/
 override chrome://global/skin/icons/autoscroll-XP.png					chrome://icons-override/skin/autoscroll.png
 override chrome://global/skin/icons/blacklist_favicon-XP.png			chrome://icons-override/skin/blacklist_favicon.png
 override chrome://global/skin/icons/blacklist_large-XP.png				chrome://icons-override/skin/blacklist_large.png
-override chrome://global/skin/icons/close-inverted-XPVista7.png			chrome://icons-override/skin/close-inverted.png
+# override chrome://global/skin/icons/close-inverted-XPVista7.png		chrome://icons-override/skin/close-inverted.png
 override chrome://global/skin/icons/close-XPVista7.png					chrome://icons-override/skin/close.png
+# override chrome://global/skin/icons/close-inverted-XPVista7@2x.png	chrome://icons-override/close-inverted@2x.png
+# override chrome://global/skin/icons/close-XPVista7@2x.png				chrome://icons-override/close@2x.png 
 override chrome://global/skin/icons/error-16-XP.png						chrome://icons-override/skin/error-16.png
 override chrome://global/skin/icons/error-64-XP.png						chrome://icons-override/skin/error-64.png
 override chrome://global/skin/icons/folder-item-XP.png					chrome://icons-override/skin/folder-item.png
@@ -63,3 +65,6 @@ override chrome://mozapps/skin/plugins/pluginBlocked-XP.png				chrome://icons-ov
 override chrome://mozapps/skin/plugins/pluginGeneric-16-XP.png			chrome://icons-override/skin/pluginGeneric-16.png
 override chrome://mozapps/skin/plugins/pluginGeneric-XP.png				chrome://icons-override/skin/pluginGeneric.png
 override chrome://mozapps/skin/profile/profileicon-XP.png				chrome://icons-override/skin/profileicon.png
+
+# Linux/Unix-specific overrides
+override chrome://global/skin/icons/close.svg							chrome://icons-override/skin/close.png 
