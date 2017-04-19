@@ -69,13 +69,13 @@
   -moz-padding-start: 1px;
 }
 
-.tabmail-tab[busy] > .tab-image-middle > .tab-icon-image,
-.tabmail-tab[thinking] > .tab-image-middle > .tab-icon-image {
+.tabmail-tab[busy],
+.tabmail-tab[thinking] {
   list-style-image: url("chrome://global/skin/icons/loading_16.png") !important;
-  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+  -moz-image-region: auto !important;
 }
 
-.tabmail-tab[type="glodaSearch"] > .tab-image-middle > .tab-icon-image {
+.tabmail-tab[type="glodaSearch"] {
   list-style-image: url("chrome://global/skin/icons/Search-glass.png");
 }
 
@@ -155,11 +155,40 @@
   margin-bottom: 1px;
 }
 
+.tabmail-tab:-moz-lwtheme-brighttext,
+.tabmail-arrowscrollbox > .scrollbutton-up:-moz-lwtheme-brighttext,
+.tabmail-arrowscrollbox > .scrollbutton-down:-moz-lwtheme-brighttext,
+.tabs-alltabs-button:-moz-lwtheme-brighttext {
+  background-color: rgba(0,0,0,.5);
+}
+
+.tabmail-tab:-moz-lwtheme-darktext,
+.tabmail-arrowscrollbox > .scrollbutton-up:-moz-lwtheme-darktext,
+.tabmail-arrowscrollbox > .scrollbutton-down:-moz-lwtheme-darktext,
+.tabs-alltabs-button:-moz-lwtheme-darktext {
+  background-color: rgba(255,255,255,.5);
+}
+
+.tabmail-tab:-moz-lwtheme:not([selected="true"]) {
+  opacity: .85;
+}
+
+.tabmail-tab:-moz-lwtheme[selected="true"] {
+  text-shadow: none;
+}
+
+.tabmail-tabs:-moz-lwtheme {
+  padding-top: 1px;
+}
+
 .tab-icon-image {
   margin-top: 1px;
   -moz-margin-end: 3px;
   width: 16px;
   height: 16px;
+}
+
+.tabmail-tab {
   list-style-image: url("chrome://global/skin/icons/folder-item.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
@@ -504,7 +533,7 @@ stack:-moz-locale-dir(rtl) > hbox > .tabs-alltabs-box-animate {
  * All Tabs Menupopup
  */
 
-.alltabs-item > .menu-iconic-left > .menu-iconic-icon {
+.alltabs-item {
   list-style-image: url("chrome://global/skin/icons/folder-item.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
@@ -513,6 +542,6 @@ stack:-moz-locale-dir(rtl) > hbox > .tabs-alltabs-box-animate {
   font-weight: bold;
 }
 
-.alltabs-item[busy] > .menu-iconic-left > .menu-iconic-icon {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+.alltabs-item[busy] {
+  list-style-image: url("chrome://global/skin/icons/loading_16.png") !important;
 }
