@@ -69,6 +69,10 @@
   background-color: -moz-Dialog;
 }
 
+#mailContent:-moz-lwtheme {
+  text-shadow: none;
+}
+
 #folderUnreadCol,
 #folderTotalCol,
 #folderSizeCol {
@@ -142,15 +146,15 @@ treechildren::-moz-tree-image(threadCol, container) {
 }
 
 treechildren::-moz-tree-image(news, threadCol, watch) {
-  list-style-image: url("chrome://messenger/skin/icons/thread-watched.png");
+  list-style-image: url("chrome://messenger/skin/icons/thread-watched.png") !important;
 }
 
 treechildren::-moz-tree-image(news, threadCol, ignore) {
-  list-style-image: url("chrome://messenger/skin/icons/thread-ignored.png");
+  list-style-image: url("chrome://messenger/skin/icons/thread-ignored.png") !important;
 }
 
 treechildren::-moz-tree-image(news, threadCol, ignoreSubthread) {
-  list-style-image: url("chrome://messenger/skin/icons/message-ignored.png");
+  list-style-image: url("chrome://messenger/skin/icons/message-ignored.png") !important;
 }
 
 /* ..... read column ..... */
@@ -238,19 +242,19 @@ treechildren::-moz-tree-image(subjectCol, dummy) {
 }
 
 treechildren::-moz-tree-image(subjectCol, forwarded) {
-  -moz-image-region: rect(0 48px 16px 32px);
+  -moz-image-region: rect(0 48px 16px 32px) !important;
 }
 
 treechildren::-moz-tree-image(subjectCol, replied) {
-  -moz-image-region: rect(0 32px 16px 16px);
+  -moz-image-region: rect(0 32px 16px 16px) !important;
 }
 
 treechildren::-moz-tree-image(subjectCol, replied, forwarded) {
-  -moz-image-region: rect(0 64px 16px 48px);
+  -moz-image-region: rect(0 64px 16px 48px) !important;
 }
 
 treechildren::-moz-tree-image(subjectCol, new) {
-  -moz-image-region: rect(0 96px 16px 80px);
+  -moz-image-region: rect(0 96px 16px 80px) !important;
 }
 
 
@@ -357,7 +361,7 @@ treechildren::-moz-tree-image(subjectCol, imapdeleted) {
   background-repeat: repeat-x;
 }
 
-.tabmail-tab[type="message"]  .tab-icon-image {
+.tabmail-tab[type="message"] {
   list-style-image: url("chrome://messenger/skin/icons/server.png");
   -moz-image-region: rect(0 16px 16px 0);
 }
