@@ -348,7 +348,7 @@ treechildren::-moz-tree-image(subjectCol, imapdeleted) {
 /* ..... update notifications ..... */
 
 #checkForUpdates[loading="true"] {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+  list-style-image: url("chrome://global/skin/icons/loading_16.gif");
 }
 
 #threadTree treechildren::-moz-tree-row(odd) {

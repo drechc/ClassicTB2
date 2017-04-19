@@ -71,7 +71,7 @@
 
 .tabmail-tab[busy],
 .tabmail-tab[thinking] {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png") !important;
+  list-style-image: url("chrome://global/skin/icons/loading_16.gif") !important;
   -moz-image-region: auto !important;
 }
 
@@ -543,5 +543,5 @@ stack:-moz-locale-dir(rtl) > hbox > .tabs-alltabs-box-animate {
 }
 
 .alltabs-item[busy] {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png") !important;
+  list-style-image: url("chrome://global/skin/icons/loading_16.gif") !important;
 }

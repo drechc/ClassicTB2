@@ -44,7 +44,7 @@ menuitem.menuitem-iconic > .menu-iconic-left {
 }
 
 #throbber-box[busy="true"] {
-  list-style-image: url("chrome://global/skin/icons/loading_16.png");
+  list-style-image: url("chrome://global/skin/icons/loading_16.gif");
 }
 
 #throbber-box,
