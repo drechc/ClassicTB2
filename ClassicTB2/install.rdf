@@ -1,17 +1,25 @@
 <?xml version="1.0"?>
-<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
-	<Description about="urn:mozilla:install-manifest"
-		em:id="TB3Classic@TB3Classic.org"
-		em:version="1.1.7" 
-		em:name="TB3 Classic (TB2 Inbox/Outbox)"
-		em:internalName="TB3Classic"
-		em:creator="Zamula"
-		em:contributor=""
-		em:homepageURL=""
-		em:description="TB3 theme using mostly TB2 icons plus the best of the new in TB3">
-		<em:targetApplication>
-  			<Description em:id="{3550f703-e582-4d05-9a08-453d09bdfdc6}" em:minVersion="3.0b3" em:maxVersion="3.5"/>
-  	</em:targetApplication>
-	</Description>
-</RDF>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{2A95E724-F74E-46D3-93FD-3E9850382E52}</em:id>
+    <em:version>1.0.0</em:version>
+    <em:type>4</em:type>
+    <em:name>Classic TB2</em:name>
+    <em:internalName>ClassicTB2</em:internalName>
+    <em:description>Theme using mostly TB2 icons plus the best of TB1.5, TB3, and TB6.  Based on TB3 Classic by Zamula, and ClassicReloaded by Christoph Wirsching.</em:description>
+    <em:creator>Corey Drechsler</em:creator>
+
+    <em:targetApplication>
+      <Description>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>6.0</em:minVersion>
+        <em:maxVersion>6.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+   
+  </Description>     
+
+</RDF> 
