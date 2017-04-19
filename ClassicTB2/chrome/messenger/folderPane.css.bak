@@ -1,7 +1,3 @@
-/* add back tree lines*/
-treechildren::-moz-tree-line {
-  visibility: visible;
-}
 /* ::::: Folder Pane ::::: */
 
 .tabmail-tab[type="folder"] {
