@@ -34,6 +34,14 @@
         <em:creator>Corey Drechsler</em:creator>
       </Description>
     </em:localized>
+    <em:localized>
+      <Description>
+        <em:locale>it</em:locale>
+        <em:name>Classic TB2 Options</em:name>
+        <em:description>Opzioni per il tema Classic TB2</em:description>
+        <em:creator>Corey Drechsler</em:creator>
+      </Description>
+    </em:localized>
     <em:optionsURL>chrome://ClassicTB2opt/content/preferences.xul</em:optionsURL>
 
     <em:targetApplication>
