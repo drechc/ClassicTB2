@@ -23,6 +23,22 @@
     </em:localized>
     <em:localized>
       <Description>
+        <em:locale>fr</em:locale>
+        <em:name>Classic TB2</em:name>
+        <em:description>Thème utilisant la plupart des icônes de TB2 en plus des meilleures de TB1.5, TB3 et des versions ultérieures.</em:description>
+        <em:creator>Corey Drechsler</em:creator>
+      </Description>
+    </em:localized>
+    <em:localized>
+      <Description>
+        <em:locale>de</em:locale>
+        <em:name>Classic TB2</em:name>
+        <em:description>Thema, das größtenteils TB2 Symbole und das beste von TB1.5, TB3 und später verwendet.</em:description>
+        <em:creator>Corey Drechsler</em:creator>
+      </Description>
+    </em:localized>
+    <em:localized>
+      <Description>
         <em:locale>it</em:locale>
         <em:name>Classic TB2</em:name>
         <em:description>Tema che utilizza principalmente le icone di Thunderbird 2 più il meglio delle versioni Thunderbird 1.5, Thunderbird 3 e versioni successive.</em:description>
