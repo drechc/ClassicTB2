@@ -188,3 +188,12 @@ menupopup[type="folder"] > menuitem {
 menulist.folderMenuItem > .menulist-label-box > .menulist-label {
   -moz-margin-start: 2px !important;
 }
+
+button[type="menu-button"] {
+  margin: 1px 5px 2px 5px;
+}
+
+button[type="menu-button"] > button {
+  margin: -3px;
+  -moz-margin-end: 0;
+}
