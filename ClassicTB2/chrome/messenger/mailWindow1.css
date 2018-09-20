@@ -769,16 +769,10 @@ tabpanels#tabpanelcontainer {
     border-bottom: none;
   }
   
-  #messengerWindow[sizemode=normal] #mail-toolbar-menubar2 {
-    -moz-appearance: none;
-    border: 1px solid rgba(10%, 10%, 10%, .4);
-    border-bottom: none;
-    background-clip: padding-box;
-  }
-  
-  #messengerWindow[sizemode=normal] #tabs-toolbar {
+  #messengerWindow[sizemode=normal] #navigation-toolbox  {
     border-left: 1px solid rgba(10%, 10%, 10%, .4);
     border-right: 1px solid rgba(10%, 10%, 10%, .4);
+    background-clip: padding-box;
   }
 
   #messengerWindow[sizemode=normal] statusbar {
