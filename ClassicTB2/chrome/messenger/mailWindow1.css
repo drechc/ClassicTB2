@@ -412,7 +412,7 @@ tabpanels#tabpanelcontainer {
 }
 
 #titlebar {
-  -moz-binding: url("chrome://global/content/bindings/general.xml#windowdragbox");
+  
 }
 
 #messengerWindow:not([tabsintitlebar]) #titlebar {
@@ -424,7 +424,7 @@ tabpanels#tabpanelcontainer {
 }
 
 #titlebar-content:-moz-lwtheme {
-  -moz-binding: url("chrome://global/content/bindings/general.xml#windowdragbox");
+ 
   visibility: visible;
 }
 
@@ -467,7 +467,8 @@ tabpanels#tabpanelcontainer {
   margin-left: 10px; /* additional space for Aero Snap */
 }
 
-#messengerWindow:not([tabsintitlebar]) .titlebar-placeholder {
+#messengerWindow:not([tabsintitlebar]) .titlebar-placeholder,
+#mail-toolbar-menubar2:not([autohide="true"]) ~ #tabs-toolbar .titlebar-placeholder{
   visibility: collapse; 
 }
 
@@ -791,13 +792,14 @@ tabpanels#tabpanelcontainer {
     background-clip: padding-box;
   }
   
-  #messengerWindow[tabsintitlebar] #mail-toolbar-menubar2 {
-    padding-top: 14px;
+  #messengerWindow[tabsintitlebar][sizemode=maximized] #navigation-toolbox {
+    padding-top: 8px;
   }
   
   #messengerWindow[tabsintitlebar] #navigation-toolbox {
     -moz-appearance: none;
     border-top-width: 1px;
+	margin-top: 6px;
   }
 }
 
