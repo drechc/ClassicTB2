@@ -766,21 +766,19 @@ tabpanels#tabpanelcontainer {
 
   #messengerWindow #mail-toolbar-menubar2 {
     -moz-appearance: none;
-    border-top: 1px solid rgba(10%, 10%, 10%, .4) !important;
     border-bottom: none;
   }
   
   #messengerWindow[sizemode=normal] #mail-toolbar-menubar2 {
-	-moz-appearance: none;
-	border: 1px solid rgba(10%, 10%, 10%, .4);
-	border-top: 1px solid rgba(10%, 10%, 10%, .4) !important;
+    -moz-appearance: none;
+    border: 1px solid rgba(10%, 10%, 10%, .4);
     border-bottom: none;
     background-clip: padding-box;
   }
   
   #messengerWindow[sizemode=normal] #tabs-toolbar {
-	border-left: 1px solid rgba(10%, 10%, 10%, .4);
-	border-right: 1px solid rgba(10%, 10%, 10%, .4);
+    border-left: 1px solid rgba(10%, 10%, 10%, .4);
+    border-right: 1px solid rgba(10%, 10%, 10%, .4);
   }
 
   #messengerWindow[sizemode=normal] statusbar {
@@ -798,8 +796,11 @@ tabpanels#tabpanelcontainer {
   
   #messengerWindow[tabsintitlebar] #navigation-toolbox {
     -moz-appearance: none;
-    border-top-width: 1px;
-	margin-top: 6px;
+    margin-top: 6px;
+  }
+  
+  #messengerWindow #navigation-toolbox {
+    border-top: 1px solid rgba(10%, 10%, 10%, .4);
   }
 }
 
