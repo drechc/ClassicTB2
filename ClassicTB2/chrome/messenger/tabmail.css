@@ -67,7 +67,7 @@
               -moz-linear-gradient(-moz-dialog, -moz-dialog);
   background-origin: border-box;
   background-position: 1px 2px;
-  background-size: -moz-calc(100% - 2px) -moz-calc(100% - 2px);
+  background-size: calc(100% - 2px) calc(100% - 2px);
   background-repeat: no-repeat;
   margin: 0;
   padding: 1px 0 3px;
