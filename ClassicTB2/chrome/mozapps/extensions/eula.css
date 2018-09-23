@@ -1,3 +1,7 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 #icon {
   list-style-image: url("chrome://mozapps/skin/extensions/extensionGeneric.png");
   max-width: 48px;
@@ -34,10 +38,6 @@
   color: -moz-FieldText;
   background-color: -moz-Field;
   margin: 1em;
-  border: 1px solid;
-  -moz-border-top-colors: ActiveBorder;
-  -moz-border-right-colors: ActiveBorder;
-  -moz-border-bottom-colors: ActiveBorder;
-  -moz-border-left-colors: ActiveBorder;
+  border: 1px solid ActiveBorder;
 }
 

@@ -70,13 +70,7 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
   border-bottom: 1px solid ThreeDShadow;
 }
 
-#quick-filter-bar-main-bar:-moz-system-metric(windows-default-theme) {
-  background-color: ThreeDFace;
-  border-top: 1px solid #fff;
-  border-bottom: 2px solid;
-  -moz-border-bottom-colors: #9196a2 #fff;
-}
-
+#quick-filter-bar-main-bar:-moz-system-metric(windows-default-theme),
 #quick-filter-bar-expando:-moz-system-metric(windows-default-theme) {
   background-color: ThreeDFace;
 }
@@ -85,13 +79,6 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
 #quick-filter-bar-filter-text-bar {
   border-top: 1px solid ThreeDHighlight;
   border-bottom: 1px solid ThreeDShadow;
-}
-
-#quick-filter-bar-tab-bar:-moz-system-metric(windows-default-theme),
-#quick-filter-bar-filter-text-bar:-moz-system-metric(windows-default-theme) {
-  border-top: 1px solid #fff;
-  border-bottom: 2px solid;
-  -moz-border-bottom-colors: #9196a2 #fff;
 }
 
 #quick-filter-bar[filterActive="searching"] {
