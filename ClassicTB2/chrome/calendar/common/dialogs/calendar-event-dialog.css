@@ -29,7 +29,7 @@ label.label {
     -moz-image-region: rect(0px 147px 24px 140px);
     padding-top: 3px;
     padding-bottom: 3px;
-    -moz-margin-start: -3px;
+    margin-inline-start: -3px;
     margin-bottom: -15px;
     position: relative;
     -moz-user-focus: normal;
@@ -53,7 +53,7 @@ label.label {
 
 .keepduration-link-image {
     list-style-image: url(chrome://calendar/skin/calendar-event-dialog.png);
-    -moz-margin-start: -1px;
+    margin-inline-start: -1px;
 }
 
 #link-image-top {
@@ -155,7 +155,7 @@ daypicker-monthday {
 }
 
 .default-indent {
-    -moz-margin-start: 1.5em;
+    margin-inline-start: 1.5em;
 }
 
 /*--------------------------------------------------------------------
@@ -183,11 +183,11 @@ dialog[systemcolors] .listbox-noborder {
 /* remove on Windows the double border with the splitter */
 @media (-moz-windows-theme) {
     #attendees-list > .listbox-noborder {
-        -moz-border-end-style: none;
+        border-inline-end-style: none;
     }
     #timebar > .listbox-noborder,
     #freebusy-grid > .listbox-noborder {
-        -moz-border-start-style: none;
+        border-inline-start-style: none;
     }
 }
 
@@ -208,32 +208,32 @@ dialog[systemcolors] .listbox-noborder {
 }
 
 freebusy-day {
-    -moz-margin-end: 2px;
-    -moz-border-start: 1px solid #8D8E90;
-    -moz-border-end: 1px solid #8D8E90;
+    margin-inline-end: 2px;
+    border-inline-start: 1px solid #8D8E90;
+    border-inline-end: 1px solid #8D8E90;
     border-bottom: 1px solid #8D8E90;
 }
 
 dialog[systemcolors] freebusy-day {
-    -moz-border-start: 1px solid ThreeDShadow;
-    -moz-border-end: 1px solid ThreeDShadow;
+    border-inline-start: 1px solid ThreeDShadow;
+    border-inline-end: 1px solid ThreeDShadow;
     border-bottom: 1px solid ThreeDShadow;
 }
 
 freebusy-day:first-child,
 dialog[systemcolors] freebusy-day:first-child {
-    -moz-border-start: 1px solid transparent;
+    border-inline-start: 1px solid transparent;
 }
 
 freebusy-day:last-child,
 dialog[systemcolors] freebusy-day:last-child {
-    -moz-border-end: 1px solid transparent;
+    border-inline-end: 1px solid transparent;
 }
 
 /* negative margins to clear freebusy-day's border and margin */
 freebusy-day > box {
-    -moz-margin-start: -1px;
-    -moz-margin-end: -3px;
+    margin-inline-start: -1px;
+    margin-inline-end: -3px;
 }
 
 .freebusy-content {
@@ -241,15 +241,15 @@ freebusy-day > box {
     clip: rect(0px 0px 0px 0px);
 }
 
-/* -moz-margin-end 2px is needed to take border-right from the grid elements into account */
+/* margin-inline-end 2px is needed to take border-right from the grid elements into account */
 .freebusy-timebar-title {
-    -moz-margin-end: 2px;
-    -moz-padding-start: 2px;
+    margin-inline-end: 2px;
+    padding-inline-start: 2px;
 }
 
 .freebusy-timebar-hour {
-    -moz-padding-start: 2px;
-    -moz-padding-end: 3px;
+    padding-inline-start: 2px;
+    padding-inline-end: 3px;
     margin-top: 2px;
     margin-bottom: 3px;
 }
@@ -265,15 +265,15 @@ freebusy-day > box {
 }
 
 .freebusy-grid {
-    -moz-border-start: 1px solid #BDBEC0;
+    border-inline-start: 1px solid #BDBEC0;
     background-color: #E09EBD;
     color: #E09EBD;
     min-height: 16px;
-    -moz-padding-start: 1px;
+    padding-inline-start: 1px;
 }
 
 dialog[systemcolors] .freebusy-grid {
-    -moz-border-start: 1px solid ThreeDShadow;
+    border-inline-start: 1px solid ThreeDShadow;
 }
 
 .freebusy-grid[state="busy"] {
@@ -298,23 +298,23 @@ dialog[systemcolors] .freebusy-grid {
 
 .freebusy-grid:first-child,
 dialog[systemcolors] .freebusy-grid:first-child {
-    -moz-border-start: 1px solid transparent;
+    border-inline-start: 1px solid transparent;
 }
 
 .freebusy-grid.last-in-day {
-    -moz-border-end: 1px solid #8D8E90;
-    -moz-margin-end: 2px;
+    border-inline-end: 1px solid #8D8E90;
+    margin-inline-end: 2px;
 }
 
 dialog[systemcolors] .freebusy-grid.last-in-day {
-    -moz-border-end: 1px solid ThreeDShadow;
+    border-inline-end: 1px solid ThreeDShadow;
 }
 
 #dialog-box {
     padding-top: 8px;
     padding-bottom: 10px;
-    -moz-padding-start: 8px;
-    -moz-padding-end: 10px;
+    padding-inline-start: 8px;
+    padding-inline-end: 10px;
 }
 
 #addressingWidget {

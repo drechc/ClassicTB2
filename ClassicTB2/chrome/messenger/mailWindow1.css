@@ -60,7 +60,7 @@
 treechildren::-moz-tree-row(dummy)  {
   background-color:  #F0F0F0;
   margin-bottom: 1px;
-  -moz-padding-start: 2px;
+  padding-inline-start: 2px;
 }
 
 treechildren::-moz-tree-row(selected) {
@@ -99,12 +99,12 @@ treechildren::-moz-tree-cell-text(container, closed, hasUnread, read) {
 /* ::::: message column icons ::::: */
 
 treecol.treecol-image image {
-  -moz-padding-end: 5px;
+  padding-inline-end: 5px;
   padding-bottom: 3px;
 }
 
 :-moz-system-metric(windows-classic) treecol.treecol-image image {
-  -moz-padding-end: 1px;
+  padding-inline-end: 1px;
   padding-bottom: 2px;
 }
 
@@ -166,7 +166,7 @@ treecol.flagColumnHeader {
 
 treechildren::-moz-tree-image(flaggedCol) {
   list-style-image: url("chrome://messenger/skin/icons/flag-empty.png");
-  -moz-padding-end: 2px;
+  padding-inline-end: 2px;
 }
 
 treechildren::-moz-tree-image(flaggedCol, dummy) {
@@ -181,13 +181,13 @@ treechildren::-moz-tree-image(flaggedCol, flagged) {
 
 treecol.junkStatusHeader {
   list-style-image: url("chrome://messenger/skin/icons/junk-col.png");
-  -moz-padding-end: 3px;
+  padding-inline-end: 3px;
 }
 
 /* "unknown" now looks like "not junk".  see bug #182386 */
 treechildren::-moz-tree-image(junkStatusCol) {
   list-style-image: url("chrome://messenger/skin/icons/readmail.png");
-  -moz-padding-start: 0px;
+  padding-inline-start: 0px;
 }
 
 treechildren::-moz-tree-image(junkStatusCol, junk) {
@@ -201,21 +201,21 @@ treechildren::-moz-tree-image(junkStatusCol, dummy) {
 
 treechildren::-moz-tree-image(junkStatusCol, notjunk) {
   list-style-image: url("chrome://messenger/skin/icons/readmail.png");
-  -moz-padding-start: 0px;
+  padding-inline-start: 0px;
 }
 
 /* ..... subject column ..... */
 
 #subjectCol {
-  -moz-padding-start: 17px;
+  padding-inline-start: 17px;
 }
 
 #subjectCol[primary="true"] {
-  -moz-padding-start: 30px;
+  padding-inline-start: 30px;
 }
 
 treechildren::-moz-tree-image(subjectCol) {
-  -moz-margin-end: 2px;
+  margin-inline-end: 2px;
   list-style-image: url("chrome://messenger/skin/icons/message.png");
   -moz-image-region: rect(0 16px 16px 0);
 }
@@ -250,7 +250,7 @@ treechildren::-moz-tree-image(subjectCol, imapdeleted) {
 }
 
 treechildren::-moz-tree-cell-text(subjectCol) {
-  -moz-padding-start: 0 !important;
+  padding-inline-start: 0 !important;
 }
 
 #sizeCol,
@@ -274,12 +274,12 @@ treechildren::-moz-tree-cell-text(subjectCol) {
 /* ..... folder pane adjustments ..... */
 
 #folderpane-title {
-  -moz-padding-start: 12px;
-  -moz-padding-end: 8px;
+  padding-inline-start: 12px;
+  padding-inline-end: 8px;
 }
 
 .folderview-cycler {
-  -moz-padding-end: 0px;
+  padding-inline-end: 0px;
 }
 
 .folderview-cycler[dir="prev"],
@@ -296,7 +296,7 @@ treechildren::-moz-tree-cell-text(subjectCol) {
 
 #mailContent[layout="standard"] #threadpane-splitter {
   /* Overlap the folder pane splitter to make the splitters appear unified. */
-  -moz-margin-start: -1px;
+  margin-inline-start: -1px;
 }
 
 #mailContent[layout="standard"] #folderpane_splitter:-moz-locale-dir(rtl) {
@@ -308,16 +308,15 @@ treechildren::-moz-tree-cell-text(subjectCol) {
 #mailContent[layout="standard"] #messagepanebox:-moz-locale-dir(rtl){
   /* ... draw it here instead! (This removes the white highlight just to the
      right of the thread pane splitter so everything looks pretty.) */
-  margin-right: -2px;
-  border-right: 2px solid;
-  -moz-border-right-colors: ThreeDHighlight ThreeDShadow;
+  margin-right: -1px;
+  border-right: 1px solid ThreeDShadow;
 }
 
 #mailContent[layout="standard"] #threadPaneBox:-moz-locale-dir(rtl) {
   /* Make sure we have a white dot in the top-left corner where the splitters
      meet. */
-  margin-bottom: -2px;
-  padding-bottom: 2px;
+  margin-bottom: -1px;
+  padding-bottom: 1px;
 }
 
 #mailContent[layout="wide"] #folderpane_splitter {
@@ -339,17 +338,16 @@ treechildren::-moz-tree-cell-text(subjectCol) {
      folder pane splitter so everything looks pretty.) */
   position: relative;
   z-index: 1;
-  margin-bottom: -2px;
-  border-bottom: 2px solid;
-  -moz-border-bottom-colors: ThreeDHighlight ThreeDShadow;
+  margin-bottom: -1px;
+  border-bottom: 1px solid ThreeDShadow;
 }
 
 #mailContent[layout="wide"] #folderPaneBox:-moz-locale-dir(ltr),
 #mailContent[layout="wide"] #threadPaneBox:-moz-locale-dir(rtl) {
   /* Make sure we have a white dot in the top-left corner where the splitters
      meet. */
-  margin-right: -2px;
-  padding-right: 2px;
+  margin-right: -1px;
+  padding-right: 1px;
 }
 
 /* ..... status bar adjustments ..... */
@@ -447,7 +445,7 @@ tabpanels#tabpanelcontainer {
 
 @media not all and (-moz-windows-classic) {
   #titlebar-min {
-    -moz-margin-end: 2px;
+    margin-inline-end: 2px;
   }
 }
 
@@ -474,29 +472,26 @@ tabpanels#tabpanelcontainer {
 
 /* Window titlebar drawn by TB. So needs border like system windows */
 #messengerWindow[sizemode="normal"] > #titlebar > #titlebar-content {
-  border-top: 3px solid;
-  -moz-border-top-colors: ThreeDLightShadow ThreeDHighlight ActiveBorder;
+  border-top: 1px solid ActiveBorder;
 }
 
 #messengerWindow[sizemode="normal"] #titlebar-buttonbox {
-  margin-top: -3px;
+  margin-top: -1px;
 }
 
 #messengerWindow[sizemode="normal"] > #titlebar >
 #titlebar-content:-moz-window-inactive {
-  -moz-border-top-colors: ThreeDLightShadow ThreeDHighlight InactiveBorder;
+  border-top-color: InactiveBorder;
 }
 
 @media (-moz-windows-default-theme) {
   #messengerWindow[sizemode="normal"] > #titlebar > #titlebar-content {
-    -moz-border-top-colors: rgba(0, 0, 0, .1) rgba(255, 255, 255, .3)
-                            rgba(255, 255, 255, .2);
+    border-top-color: rgba(0, 0, 0, .1);
   }
 
   #messengerWindow[sizemode="normal"] > #titlebar >
   #titlebar-content:-moz-window-inactive {
-    -moz-border-top-colors: rgba(255, 255, 255, .4) rgba(255, 255, 255, .3)
-                            rgba(255, 255, 255, .2);
+    border-top-color: rgba(255, 255, 255, .4);
   }
 }
 
@@ -529,9 +524,8 @@ tabpanels#tabpanelcontainer {
   }
 
   #messengerWindow[sizemode="normal"] > #titlebar > #titlebar-content:-moz-lwtheme {
-    margin-bottom: -2px;
-    border-top: 2px solid;
-    -moz-border-top-colors: rgb(37, 44, 51) rgba(255, 255, 255, .6);
+    margin-bottom: -1px;
+    border-top: 1px solid rgb(37, 44, 51);
   }
   
   @media (-moz-os-version: windows-vista),
@@ -548,7 +542,7 @@ tabpanels#tabpanelcontainer {
   
     #messengerWindow[sizemode="maximized"] #titlebar-buttonbox {
       -moz-appearance: -moz-window-button-box-maximized;
-      -moz-margin-end: 3px;
+      margin-inline-end: 3px;
     }
   }
   
@@ -747,12 +741,11 @@ tabpanels#tabpanelcontainer {
     }
 
     #messengerWindow[sizemode="normal"] > #titlebar > #titlebar-content {
-      border-top-width: 2px;
-      -moz-border-top-colors: #4D4D4D #E9ECF3;
+      border-top: 1px solid #4D4D4D;
     }
 
     #messengerWindow[sizemode="normal"] #titlebar-buttonbox {
-      margin-top: -2px;
+      margin-top: -1px;
     }
   }
 }
@@ -854,7 +847,7 @@ tabpanels#tabpanelcontainer {
   -moz-appearance: menuimage !important;
 }
 #viewPickerPopup > menuitem > .menu-iconic-text {
-  -moz-margin-start: 2px !important;
+  margin-inline-start: 2px !important;
 }
 
 #viewPickerPopup > menuseparator {

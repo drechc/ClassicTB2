@@ -59,8 +59,8 @@
   font-weight: bold;
   margin-top: 8px;
   margin-bottom: 0px;
-  -moz-margin-start: 9px;
-  -moz-margin-end: 12px;
+  margin-inline-start: 9px;
+  margin-inline-end: 12px;
 }
 
 #editContactEmail {

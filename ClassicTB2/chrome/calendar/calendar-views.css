@@ -52,8 +52,8 @@ tab[calview]:hover {
 }
 
 .view-navigation-button {
-    -moz-margin-start: 2px;
-    -moz-margin-end: 2px;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
 }
 
 .today-navigation-button {

@@ -15,7 +15,7 @@
   border: 1px solid ThreeDShadow;
   border-radius: 10px;
   padding: 1.1em;
-  -moz-padding-start: calc(1.1em + 64px + 1.1em);
+  padding-inline-start: calc(1.1em + 64px + 1.1em);
   margin-left: 1em;
   margin-right: 1em;
 }
@@ -36,15 +36,15 @@
 }
 
 imgroup {
-  -moz-padding-start: 4px;
+  padding-inline-start: 4px;
 }
 
 imgroup > label {
-  -moz-margin-start: 4px;
+  margin-inline-start: 4px;
 }
 
 imcontact, imconv {
-  -moz-padding-start: 23px;
+  padding-inline-start: 23px;
 }
 
 imgroup,
@@ -68,7 +68,7 @@ imconv[attention] {
 
 .contactDisplayName,
 .convDisplayName {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 imcontact[aliasing] .contactDisplayName {
@@ -77,7 +77,7 @@ imcontact[aliasing] .contactDisplayName {
 
 .contactStatusText,
 .convStatusText {
-  -moz-margin-start: 0;
+  margin-inline-start: 0;
 }
 
 /* Avoid a strange jumping bug when hovering and the startChatBubble appears */
@@ -104,7 +104,7 @@ imcontact[aliasing] .contactDisplayName {
 }
 
 .closeConversationButton {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
   -moz-stack-sizing: ignore;
   list-style-image: url("chrome://global/skin/icons/close.png");
   -moz-image-region: rect(0px, 56px, 14px, 42px);
@@ -141,7 +141,7 @@ imcontact[aliasing] .contactDisplayName {
   border-style: none;
   -moz-appearance: none;
   background-color: -moz-Dialog;
-  background-image: -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
   border-bottom: none;
 }
 
@@ -247,7 +247,7 @@ imcontact[aliasing] .contactDisplayName {
 }
 
 .displayName {
-  font-size: large;
+  font-size: 16px;
   border-bottom: 1px solid rgba(0,0,0,0.25);
   margin: 0 0 16px !important;
   padding-right: 20px;
@@ -267,7 +267,6 @@ imcontact[aliasing] .contactDisplayName {
 
 .conv-messages {
   min-width: 150px;
-
   border: 1px solid rgba(0, 0, 0, 0.25);
   border-left: none;
   border-right: none !important;
@@ -276,7 +275,6 @@ imcontact[aliasing] .contactDisplayName {
 .conv-messages[chat] {
   border-right: solid 1px GrayText;
 }
-
 
 /* Animation copied from the find bar in Firefox - http://dxr.mozilla.org/mozilla-central/source/toolkit/themes/linux/global/findBar.css#7 */
 .conv-status-container {
@@ -297,12 +295,12 @@ imcontact[aliasing] .contactDisplayName {
   opacity: 0;
   transition-delay: 0s, 0s, 150ms;
 }
+
 .conv-textbox {
   padding: 2px;
   box-sizing: content-box;
   border: 1px solid transparent;
 }
-
 
 .conv-textbox[invalidInput="true"] {
   border-color: red;
@@ -315,14 +313,14 @@ imcontact[aliasing] .contactDisplayName {
 .conv-counter {
   color: #000;
   background-color: rgba(246, 246, 246, 0.7);
-  -moz-border-start: 1px solid rgb(200, 200, 200);
+  border-inline-start: 1px solid rgb(200, 200, 200);
   border-top: 1px solid rgb(200, 200, 200);
   /* Padding that gets flipped to margins in .conv-counter[value^="0"] to avoid the red border. */
   font-size: 130%;
   padding-top: 0;
   padding-bottom: 1px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 6px;
+  padding-inline-start: 5px;
+  padding-inline-end: 6px;
   margin: 0;
 }
 
@@ -346,18 +344,10 @@ imcontact[aliasing] .contactDisplayName {
 .conv-counter[value^="-"] {
   margin-bottom: 1px;
   /* The 6px padding-end from .conv-counter is split into a 1px margin-end (to avoid the border) and 5px padding-end (as regular padding). */
-  -moz-margin-end: 1px;
+  margin-inline-end: 1px;
   padding-top: 1px;
   padding-bottom: 0;
-  -moz-padding-end: 5px;
-}
-
-
-.splitter {
-  margin: 0;
-  border-style: none;
-  height: 3px;
-  background: transparent;
+  padding-inline-end: 5px;
 }
 
 #conv-toolbar {
@@ -368,12 +358,12 @@ imcontact[aliasing] .contactDisplayName {
   margin: 0 0;
 }
 
-.conv-nicklist > .listitem-iconic > .listcell-iconic > .listcell-label {
+.conv-nicklist > .listitem-iconic .listcell-label {
   font-weight: bold;
-  -moz-padding-start: 1px;
+  padding-inline-start: 1px;
 }
 
-.conv-nicklist > .listitem-iconic > .listcell-iconic > .listcell-icon {
+.conv-nicklist > .listitem-iconic .listcell-icon {
   min-width: 16px;
   margin: 0 2px;
 }
@@ -386,8 +376,8 @@ imcontact[aliasing] .contactDisplayName {
 
 .conv-nicklist-header-label {
   font-weight: bold;
-  -moz-margin-start: 0 !important;
-  -moz-margin-end: 2px !important;
+  margin-inline-start: 0 !important;
+  margin-inline-end: 2px !important;
 }
 
 .splitter.conv-chat {
@@ -399,35 +389,34 @@ grippy {
   margin: 0 1px;
 }
 
-.listitem-iconic[inactive] > .listcell-iconic > .listcell-icon {
+.listitem-iconic[inactive] .listcell-icon {
   opacity: 0.45;
 }
 
-.listitem-iconic[inactive][selected] > .listcell-iconic > .listcell-icon {
+.listitem-iconic[inactive][selected] .listcell-icon {
   opacity: 0.7;
 }
 
-.listitem-iconic[inactive] > .listcell-iconic > .listcell-label {
+.listitem-iconic[inactive] .listcell-label {
   color: GrayText !important;
   font-weight: normal;
 }
 
-.listitem-iconic[inactive][selected] > .listcell-iconic > .listcell-label {
+.listitem-iconic[inactive][selected] .listcell-label {
   color: -moz-cellhighlighttext !important;
 }
 
-.conv-nicklist:focus > .listitem-iconic[inactive][selected] > .listcell-iconic > .listcell-label {
+.conv-nicklist:focus > .listitem-iconic[inactive][selected] .listcell-label {
   color: HighlightText !important;
 }
-
 
 /* from instantbird/themes/blist.css */
 imgroup .twisty {
   padding-top: 1px;
   width: 9px; /* The image's width is 9 pixels */
   height: 9px;
-  -moz-margin-end: 3px;
-  -moz-margin-start: 3px;
+  margin-inline-end: 3px;
+  margin-inline-start: 3px;
   background: url("chrome://global/skin/tree/twisty-open.png") no-repeat center;
 }
 
@@ -445,6 +434,12 @@ imgroup[closed] .twisty {
   min-width: 40px;
 }
 
+#statusTypeIcon > .toolbarbutton-icon {
+  /* Required for hidpi */
+  width: 16px;
+  padding: 0;
+}
+
 /* show the status icon also in text mode */
 toolbar[mode="text"] #statusTypeIcon > .toolbarbutton-icon {
   display: -moz-box;
@@ -452,7 +447,7 @@ toolbar[mode="text"] #statusTypeIcon > .toolbarbutton-icon {
 
 .statusMessageToolbarItem {
   margin: 2px 4px;
-  -moz-margin-start: -1px;
+  margin-inline-start: -1px;
   padding: 3px 5px 4px;
   border: 1px solid transparent;
 }
@@ -469,8 +464,8 @@ toolbar[mode="text"] #statusTypeIcon > .toolbarbutton-icon {
 
 #chat-status-selector > .statusMessageToolbarItem[editing] {
   -moz-appearance: none;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 4px;
+  padding-inline-end: 4px;
   border-color: ThreeDShadow;
   background-color: -moz-field;
 }
@@ -478,46 +473,6 @@ toolbar[mode="text"] #statusTypeIcon > .toolbarbutton-icon {
 .prplBuddyIcon {
   margin-top: 2px;
   margin-bottom: 2px;
-}
-
-/* Make the listSplitter, contextSplitter and splitter appear unified */
-#listSplitter {
-  -moz-border-end: none;
-  min-width: 4px;
-}
-
-#noConvScreen {
-  -moz-border-start: 2px solid;
-  -moz-border-left-colors: ThreeDFace ThreeDDarkShadow;
-}
-
-.conv-top,
-.conv-bottom,
-#logDisplay {
-  -moz-border-start: 2px solid;
-  -moz-border-end: 2px solid;
-  -moz-border-right-colors: ThreeDHighlight ThreeDShadow;
-  -moz-border-left-colors: ThreeDFace ThreeDDarkShadow;
-}
-
-.conv-top {
-  border-bottom: 2px solid;
-  -moz-border-bottom-colors: ThreeDHighlight ThreeDShadow;
-}
-
-.conv-bottom {
-  border-top: 2px solid;
-  -moz-border-top-colors: ThreeDFace ThreeDDarkShadow;
-}
-
-#contextSplitter {
-  -moz-border-start: none;
-  min-width: 4px;
-}
-
-.splitter {
-  min-height: 2px;
-  background-color: ThreeDFace;
 }
 
 /* Adaptation from #folderTree */
@@ -538,8 +493,8 @@ toolbar[mode="text"] #statusTypeIcon > .toolbarbutton-icon {
 }
 
 .conv-messages {
-  border-top: 0px;
-  border-bottom: 0px;
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .conv-textbox {
@@ -549,8 +504,8 @@ toolbar[mode="text"] #statusTypeIcon > .toolbarbutton-icon {
 }
 
 .conv-counter[value^="-"] {
-  -moz-margin-end: 2px;
-  -moz-padding-end: 4px;
+  margin-inline-end: 2px;
+  padding-inline-end: 4px;
 }
 
 #contextPane {

@@ -40,7 +40,7 @@
 }
 
 .today-closebutton > .toolbarbutton-icon {
-  -moz-margin-end: 0px; /* override toolkit's default value */
+  margin-inline-end: 0px; /* override toolkit's default value */
 }
 
 #todaypane-new-event-button {

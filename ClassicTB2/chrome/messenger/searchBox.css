@@ -24,8 +24,8 @@
 #quick-search-button  {
   margin-top: 0px;
   margin-bottom: 0px;
-  -moz-margin-start: 0px;
-  -moz-margin-end: 2px;
+  margin-inline-start: 0px;
+  margin-inline-end: 2px;
 }
 
 .gloda-search-icon {
@@ -72,8 +72,8 @@
 #unifinder-task-edit-field {
   -moz-appearance: none;
   border: 1px solid ThreeDShadow;
-  -moz-padding-end: 4px;
-  -moz-padding-start: 4px;
+  padding-inline-end: 4px;
+  padding-inline-start: 4px;
 }
 
 /* special treatment because this boxes are on the main toolbars */

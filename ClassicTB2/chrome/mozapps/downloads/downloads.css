@@ -7,8 +7,7 @@
   #downloadView {
     -moz-appearance: none;
     margin: 0;
-    border-bottom: 2px solid;
-    -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+    border-bottom: 1px solid ThreeDLightShadow;
   }
 }
 

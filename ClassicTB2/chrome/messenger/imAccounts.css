@@ -30,13 +30,13 @@ notification > hbox {
   border: 1px solid ThreeDShadow;
   border-radius: 10px;
   padding: 1.1em;
-  -moz-padding-start: 20px;
+  padding-inline-start: 20px;
   margin-left: 1em;
   margin-right: 1em;
 }
 #noAccountImage {
   list-style-image: url("chrome://global/skin/icons/information-64.png");
-  -moz-margin-end: 1.2em;
+  margin-inline-end: 1.2em;
 }
 #noAccountInnerBox {
   max-width: 25em;
@@ -53,8 +53,7 @@ notification > hbox {
 #accountlist {
   margin: 0 0;
   -moz-appearance: none;
-  border-bottom: 2px solid;
-  -moz-border-bottom-colors: ThreeDHighlight ThreeDLightShadow;
+  border-bottom: 1px solid ThreeDLightShadow;
 }
 
 #bottombuttons {
@@ -115,7 +114,7 @@ richlistitem[dragover="up"] {
 }
 
 .accountStateIcon {
-  -moz-margin-start: 16px;
+  margin-inline-start: 16px;
   margin-top: 16px;
   width: 16px;
   height: 16px;

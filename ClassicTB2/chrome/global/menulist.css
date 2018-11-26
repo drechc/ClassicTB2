@@ -33,9 +33,9 @@ menulist {
 
 .menulist-label {
   margin-top: 0 !important;
-  -moz-margin-end: 0 !important;
+  margin-inline-end: 0 !important;
   margin-bottom: 0 !important;
-  -moz-margin-start: 1px !important;
+  margin-inline-start: 1px !important;
 }
 
 /* ..... focused state ..... */
@@ -61,8 +61,8 @@ menulist[disabled="true"] {
 .menulist-editable-box {
   padding-top: 3px;
   padding-bottom: 3px;
-  -moz-padding-start: 2px;
-  -moz-padding-end: 0px;
+  padding-inline-start: 2px;
+  padding-inline-end: 0px;
 }
 
 html|*.menulist-editable-input {

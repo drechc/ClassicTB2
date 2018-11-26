@@ -21,8 +21,8 @@ button {
 .button-box {
   padding-top: 2px;
   padding-bottom: 3px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 5px;
+  padding-inline-start: 4px;
+  padding-inline-end: 5px;
 }
 
 .button-text {
@@ -59,8 +59,8 @@ button[open="true"] > .button-box:-moz-system-metric(windows-classic),
 button[checked="true"] > .button-box:-moz-system-metric(windows-classic) {
   padding-top: 3px;
   padding-bottom: 2px;
-  -moz-padding-start: 5px;
-  -moz-padding-end: 4px;
+  padding-inline-start: 5px;
+  padding-inline-end: 4px;
 }
 
 /* .......... disabled state .......... */
@@ -91,8 +91,8 @@ button[type="menu-button"] {
 .button-menubutton-dropmarker[open="true"] {
   margin-top: 2px;
   margin-bottom: 0px;
-  -moz-margin-start: 2px;
-  -moz-margin-end: 0px;
+  margin-inline-start: 2px;
+  margin-inline-end: 0px;
 }
 
 /* ::::: plain buttons ::::: */

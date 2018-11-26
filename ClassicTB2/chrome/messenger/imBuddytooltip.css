@@ -11,7 +11,7 @@
 .tooltip-header {
   font-weight: bold;
   font-size: 14pt;
-  -moz-margin-end: 3px;
+  margin-inline-end: 3px;
   margin-bottom: 0 !important;
 }
 

@@ -107,20 +107,20 @@
 
 #attachmentIcon {
   list-style-image: url("chrome://messenger/skin/icons/attachment-col.png");
-  -moz-margin-start: 5px;
+  margin-inline-start: 5px;
 }
 
 #attachmentCount {
   margin: 0;
   padding: 2px 0;
-  -moz-margin-start: 2px;
-  -moz-margin-end: 1px;
+  margin-inline-start: 2px;
+  margin-inline-end: 1px;
 }
 
 #attachmentName {
   -moz-user-focus: normal;
   margin: 0;
-  -moz-margin-end: -3px;
+  margin-inline-end: -3px;
   padding: 1px 2px;
   border-radius: 2px;
   border: 1px dotted transparent;
@@ -139,7 +139,7 @@
 
 #attachmentSize {
   margin: 0;
-  -moz-margin-start: 8px;
+  margin-inline-start: 8px;
   color: #888a85; /* the same color as .headerName */
 }
 
@@ -186,7 +186,7 @@
   line-height: 1.5em;
   margin: 0;
   padding: .1em 0;
-  -moz-padding-end: 8px;
+  padding-inline-end: 8px;
   -moz-user-select: text;
   -moz-user-focus: normal;
   cursor: text;
@@ -195,15 +195,15 @@
 .msgHeaderView-button {
   -moz-appearance: button;
   min-height: 1ex;
-  -moz-margin-start: 2px;
-  -moz-margin-end: 2px;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
   margin-top: 1px;
   margin-bottom: 2px;
   vertical-align: middle;
   /* important required to override messenger.css rules */
   min-width: 1em !important;
-  -moz-padding-start: 4px !important;
-  -moz-padding-end: 3px !important;
+  padding-inline-start: 4px !important;
+  padding-inline-end: 3px !important;
   padding-top: 3px !important;
   padding-bottom: 2px !important;
   list-style-image: none;
@@ -219,7 +219,7 @@
 .msgHeaderView-button[type="menu-button"] {
   /* important required to override -moz-appearance from msgHdrView-button */
   -moz-appearance: dualbutton !important;
-  -moz-margin-end: 0 !important;
+  margin-inline-end: 0 !important;
 
   /* Need to override both rules from messenger.css and msgHeaderView-button */
   padding: 0 !important;
@@ -231,8 +231,8 @@
   min-height: 1ex;
   margin: 0px;
   /* important required to override messenger.css rules */
-  -moz-padding-start: 4px !important;
-  -moz-padding-end: 3px !important;
+  padding-inline-start: 4px !important;
+  padding-inline-end: 3px !important;
   padding-top: 3px !important;
   padding-bottom: 2px !important;
 }
@@ -245,8 +245,8 @@ toolbar[mode="text"] toolbarpaletteitem .msgHeaderView-button .toolbarbutton-tex
   margin: 0 !important;
   padding-top: 1px !important;
   padding-bottom: 0px !important;
-  -moz-padding-start: 0px !important;
-  -moz-padding-end: 0px !important;
+  padding-inline-start: 0px !important;
+  padding-inline-end: 0px !important;
 }
 
 /* For unclear reasons, toolkit's toolbarbutton.css forces a margin of 0,
@@ -259,7 +259,7 @@ toolbar[mode="text"] toolbarpaletteitem .msgHeaderView-button .toolbarbutton-tex
 
 toolbox[labelalign="end"] toolbar[mode="full"] toolbarpaletteitem .msgHeaderView-button .toolbarbutton-text,
 toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbutton-text {
-  -moz-margin-start: 2px !important;
+  margin-inline-start: 2px !important;
 }
 
 .hdrReplyToSenderButton,
@@ -315,8 +315,8 @@ toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbut
 }
 
 #otherActionsButton > hbox > .toolbarbutton-menu-dropmarker {
-  -moz-padding-start: 1px !important;
-  -moz-padding-end: 2px;
+  padding-inline-start: 1px !important;
+  padding-inline-end: 2px;
   list-style-image: url(chrome://messenger/skin/icons/mainwindow-dropdown-arrow.png);
   -moz-image-region: rect(0 13px 11px 0);
 }
@@ -341,7 +341,7 @@ toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbut
 .inline-toolbar toolbarseparator {
   height: 27px;
   margin-top: 1px;
-  -moz-margin-start: 1px; /* make it symetrical */
+  margin-inline-start: 1px; /* make it symetrical */
 }
 
 .inline-toolbar toolbarspacer {
@@ -406,10 +406,6 @@ toolbarpaletteitem .msgHeaderView-button {
   margin-bottom: 2px;
   padding: 0px 3px;
   border-radius: 4px;
-  -moz-border-top-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
   min-height: 1ex;
 }
 
@@ -419,12 +415,8 @@ toolbarpaletteitem .msgHeaderView-button {
   border-radius: 0px;
   border: 0;
   border-right: 2px solid transparent;
-  -moz-padding-end: 0.2em;
+  padding-inline-end: 0.2em;
   margin: 0;
-  -moz-border-top-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
 }
 
 .msgHeaderView-button[type="menu-button"] {
@@ -455,7 +447,7 @@ toolbarpaletteitem .msgHeaderView-button {
   background-color: transparent;
   padding: 0px;
   margin-top: 0;
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 .headerValueBox {
@@ -473,13 +465,13 @@ toolbarpaletteitem .msgHeaderView-button {
   padding: .1em 0px;
   margin: 0px;
   margin-bottom: 3px !important;
-  -moz-margin-start: 3px;
+  margin-inline-start: 3px;
   border-width: 0px;
   background-color: transparent;
 }
 
 .headerValue[containsEmail="true"] {
-  -moz-margin-start: 0px !important;
+  margin-inline-start: 0px !important;
 }
 
 .headerValueBox[singleline="true"] > .headerValue[containsEmail="true"] {
@@ -515,7 +507,7 @@ toolbarpaletteitem .msgHeaderView-button {
 
 .tagvalue {
   padding: 0 0.5ex;
-  -moz-margin-start: 0px;
+  margin-inline-start: 0px;
   background-image: url("chrome://messenger/skin/tagbg.png");
   border-radius: 3px;
   border-width: 0.5px;
@@ -539,7 +531,7 @@ toolbarpaletteitem .msgHeaderView-button {
 }
 
 .messageIdDisplayImage {
-  -moz-padding-start: 2px;
+  padding-inline-start: 2px;
   -moz-box-pack: end;
 }
 
@@ -548,8 +540,8 @@ toolbarpaletteitem .msgHeaderView-button {
 
 .emailDisplayButton {
   margin: 0;
-  -moz-padding-start: 2px !important;
-  -moz-padding-end: 2px !important;
+  padding-inline-start: 2px !important;
+  padding-inline-end: 2px !important;
   background-color: transparent;
   border-radius: 2px;
   border: 1px dotted transparent;
@@ -575,7 +567,7 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
 
 .emailSeparator {
   /* this is for the comma in between email addresses/newsgroups */
-  -moz-margin-start: -3px; /* squeeze it inside the bubble, by the star */
+  margin-inline-start: -3px; /* squeeze it inside the bubble, by the star */
 }
 
 /* Because there's no star for newsgroups like there is for email addresses,
@@ -584,7 +576,7 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
  * using a separate rule here.
  */
 .newsgroupSeparator {
-  -moz-margin-start: -2px;
+  margin-inline-start: -2px;
 }
 
 .emailDisplayButton:focus {
@@ -608,7 +600,7 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
   -moz-appearance: none;
   -moz-box-orient: vertical;
   padding: 0px;
-  -moz-margin-start: -2px !important;
+  margin-inline-start: -2px !important;
   /*margin: 0px 2px;*/
   list-style-image: url("chrome://messenger/skin/starContact.png");
   -moz-image-region: rect(0px, 16px, 16px, 0px);
@@ -640,7 +632,7 @@ mail-emailaddress[selected="true"] .emailDisplayButton{
 /* ::::: email address twisty ::::: */
 
 .addresstwisty {
-  -moz-padding-end: 0px;
+  padding-inline-end: 0px;
   padding-top: 4px;
   list-style-image:url("chrome://messenger/skin/icons/arrow/arrow-right-dim.png");
 }

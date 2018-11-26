@@ -1,45 +1,14 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-/* ***** BEGIN LICENSE BLOCK *****
- * Version: MPL 1.1/GPL 2.0/LGPL 2.1
- *
- * The contents of this file are subject to the Mozilla Public License Version
- * 1.1 (the "License"); you may not use this file except in compliance with
- * the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
- *
- * Software distributed under the License is distributed on an "AS IS" basis,
- * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
- * for the specific language governing rights and limitations under the
- * License.
- *
- * The Original Code is tabmail
- * The Initial Developer of the Original Code is
- *   Scott MacGregor <mscott@mozilla.org>.
- * Portions created by the Initial Developer are Copyright (C) 2007
- * the Initial Developer. All Rights Reserved.
- *
- * Contributor(s):
- *
- * Alternatively, the contents of this file may be used under the terms of
- * either the GNU General Public License Version 2 or later (the "GPL"), or
- * the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
- * in which case the provisions of the GPL or the LGPL are applicable instead
- * of those above. If you wish to allow use of your version of this file only
- * under the terms of either the GPL or the LGPL, and not to allow others to
- * use your version of this file under the terms of the MPL, indicate your
- * decision by deleting the provisions above and replace them with the notice
- * and other provisions required by the GPL or the LGPL. If you do not delete
- * the provisions above, a recipient may use your version of this file under
- * the terms of any one of the MPL, the GPL or the LGPL.
- *
- * ***** END LICENSE BLOCK ***** */
 
 /**
  * Tabmail Tabs
  */
 
 .tabmail-tabs[overflow="true"] {
-  -moz-padding-start: 0px;
+  padding-inline-start: 0px;
 }
 
 .tabmail-tabs > .tabmail-tab:first-child > .tab-close-button {
@@ -68,7 +37,7 @@
   background-repeat: no-repeat;
   margin: 0;
   padding: 1px 0 3px;
-  -moz-border-image: url(icons/tab.png) 4 3 0 / 4px 3px 0 repeat stretch;
+  border-image: url(icons/tab.png) 4 3 0 / 4px 3px 0 repeat stretch;
   height: 26px;
   border-radius: 0;
   border-width: 0;
@@ -121,13 +90,13 @@
 }
 
 .tab-content {
-  -moz-padding-start: 3px;
-  -moz-padding-end: 3px;
+  padding-inline-start: 3px;
+  padding-inline-end: 3px;
 }
 
 .tabmail-tab > .tab-image-middle {
   padding-top: 1px;
-  -moz-padding-start: 1px;
+  padding-inline-start: 1px;
 }
 
 .tabmail-tab[busy],
@@ -166,7 +135,7 @@
 
 .tab-icon-image,
 .tab-throbber {
-  -moz-margin-end: 3px;
+  margin-inline-end: 3px;
   margin-bottom: 1px;
 
   width: 16px;
@@ -214,7 +183,7 @@ tabpanels {
 }
 
 .tab-close-button > .toolbarbutton-icon {
-  -moz-margin-end: 0px !important;
+  margin-inline-end: 0px !important;
   margin-top: 1px;
 }
 
@@ -280,8 +249,8 @@ tabpanels {
   padding: 0 0 3px;
   width: 18px;
   height: 23px;
-  -moz-margin-start: 0px;
-  -moz-margin-end: 2px;
+  margin-inline-start: 0px;
+  margin-inline-end: 2px;
   list-style-image: url(chrome://messenger/skin/icons/tab-arrow-left.png);
 }
 
@@ -293,7 +262,7 @@ tabpanels {
   height: 23px;
   margin-top: 1px;
   margin-bottom: 1px;
-  -moz-margin-start: 2px;
+  margin-inline-start: 2px;
 }
 
 .tabmail-arrowscrollbox > stack > .scrollbutton-down-box {
@@ -310,8 +279,8 @@ tabpanels {
 .tabmail-arrowscrollbox > stack > .scrollbutton-down > .toolbarbutton-icon {
   margin-top: 2px;
   margin-bottom: 0px;
-  -moz-margin-start: 1px;
-  -moz-margin-end: 0px;
+  margin-inline-start: 1px;
+  margin-inline-end: 0px;
 }
 
 .tabmail-arrowscrollbox > .scrollbutton-up:-moz-lwtheme-brighttext,
@@ -338,8 +307,8 @@ tabpanels {
   margin-bottom: 1px;
   width: 18px !important;
   height: 23px !important;
-  -moz-padding-start: 4px !important;
-  -moz-padding-end: 4px !important;
+  padding-inline-start: 4px !important;
+  padding-inline-end: 4px !important;
   padding: 0px;
 }
 
@@ -348,11 +317,11 @@ tabpanels {
 }
 
 .tabs-alltabs-button > .toolbarbutton-icon {
-  -moz-margin-end: 0;
+  margin-inline-end: 0;
 }
 
 .tabs-alltabs-button > .toolbarbutton-menu-dropmarker {
-  -moz-margin-end: 3px !important;
+  margin-inline-end: 3px !important;
   list-style-image: url(chrome://messenger/skin/icons/mainwindow-dropdown-arrow.png);
   -moz-image-region: rect(0, 13px, 11px, 0);
 }

@@ -17,7 +17,7 @@ calendar-category-box:not([categories]) {
     list-style-image: url(chrome://calendar/skin/day-box-item-image.png);
     padding-top: 2px;
     padding-bottom: 2px;
-    -moz-margin-end: 4px;
+    margin-inline-end: 4px;
     display: none;
 }
 
@@ -51,7 +51,7 @@ calendar-category-box:not([categories]) {
 /* Margin that allows event creation by click and drag when the time slot is
    full of events. On the right side in normal view ... */
 .multiday-column-box-stack > .multiday-column-top-box[orient="horizontal"] {
-    -moz-margin-end: 5px;
+    margin-inline-end: 5px;
 }
 /* ... and on bottom in rotate view. */
 .multiday-column-box-stack > .multiday-column-top-box[orient="vertical"] {
@@ -108,7 +108,7 @@ window[systemcolors] calendar-event-column[orient="horizontal"][relation="today"
 calendar-event-column[orient="vertical"][relation="today"] {
     border-left: 1px solid #67ACD8;
     border-right: 1px solid #67ACD8;
-    -moz-margin-end: -1px;
+    margin-inline-end: -1px;
     position: relative;
 }
 
@@ -165,7 +165,7 @@ window[systemcolors] .calendar-event-column-linebox[off-time="true"] {
 calendar-header-container[relation="today"] {
     border-left: 1px solid #7FB9EE;
     border-right: 1px solid #7FB9EE;
-    -moz-margin-end: -1px;
+    margin-inline-end: -1px;
     position: relative;
 }
 
@@ -267,34 +267,28 @@ window[systemcolors] .calendar-event-column-linebox[orient="vertical"][relation=
    areas over the timebar. */
 .multiday-view-header-time-spacer[orient="horizontal"] {
     border-bottom: 2px solid #D2D2D2;
-    border-right: 2px solid #D2D2D2;
-    -moz-border-right-colors: #FFFFFF #D2D2D2;
+    border-right: 1px solid #D2D2D2;
 }
 
 window[systemcolors] .multiday-view-header-time-spacer[orient="horizontal"] {
     border-bottom: 2px solid ThreeDShadow;
-    border-right: 2px solid ThreeDShadow;
-    -moz-border-right-colors: -moz-Field ThreeDShadow;
+    border-right: 1px solid ThreeDShadow;
 }
 
 .multiday-view-header-time-spacer[orient="vertical"] {
-    border-right: 2px solid #D2D2D2;
-    -moz-border-right-colors: #D2D2D2 #D2D2D2;
+    border-right: 1px solid #D2D2D2;
 }
 
 window[systemcolors] .multiday-view-header-time-spacer[orient="vertical"] {
-    border-right: 2px solid ThreeDShadow;
-    -moz-border-right-colors: -moz-Field ThreeDShadow;
+    border-right: 1px solid ThreeDShadow;
 }
 
 .multiday-view-label-box[orient="horizontal"] > .multiday-view-label-time-spacer {
-    border-right: 2px solid #D2D2D2;
-    -moz-border-right-colors: #FFFFFF #D2D2D2;
+    border-right: 1px solid #D2D2D2;
 }
 
 window[systemcolors] .multiday-view-label-box[orient="horizontal"] > .multiday-view-label-time-spacer {
-    border-right: 2px solid ThreeDShadow;
-    -moz-border-right-colors: -moz-Field ThreeDShadow;
+    border-right: 1px solid ThreeDShadow;
 }
 
 .multiday-view-header-day-box[orient="horizontal"] {
@@ -403,8 +397,8 @@ window[systemcolors] .fgdragbox-label {
 
 .timeIndicator[orient="vertical"] {
     min-width: 1px;
-    -moz-margin-start: -1px;
-    -moz-margin-end: -1px;
+    margin-inline-start: -1px;
+    margin-inline-end: -1px;
     border-top: 2px solid red;
     opacity: 0.7;
 }
@@ -444,11 +438,11 @@ window[systemcolors] .fgdragbox-label {
 }
 
 .calendar-event-box-container[categories] {
-    -moz-margin-end: 0px;
+    margin-inline-end: 0px;
 }
 
 .calendar-event-details {
-    -moz-padding-start: 2px;
+    padding-inline-start: 2px;
     overflow: hidden;
 }
 
@@ -541,22 +535,19 @@ window[systemcolors] .calendar-time-bar-box-even {
 .calendar-time-bar-box-odd[off-time="true"] ,
 .calendar-time-bar-box-even[off-time="true"] {
     background-color: #F0F0F0;
-    border-right: 2px solid #D2D2D2;
-    -moz-border-right-colors:  #FFFFFF #D2D2D2;
+    border-right: 1px solid #D2D2D2;
 }
 
 window[systemcolors] .calendar-time-bar-box-odd[off-time="true"] ,
 window[systemcolors] .calendar-time-bar-box-even[off-time="true"] {
     background-color: rgba(0, 0, 0, .1);
-    border-right: 2px solid ThreeDShadow;
-    -moz-border-right-colors: -moz-Field ThreeDShadow;
+    border-right: 1px solid ThreeDShadow;
 }
 
 .calendar-time-bar-box-odd[orient="horizontal"],
 .calendar-time-bar-box-even[orient="horizontal"] {
     border-right: 1px solid #D2D2D2;
     border-top: 1px solid #D2D2D2;
-    -moz-border-right-colors: none;
     height: 40px; /* the same as the calendar-time-bar element */
 }
 
@@ -564,21 +555,18 @@ window[systemcolors] .calendar-time-bar-box-odd[orient="horizontal"],
 window[systemcolors] .calendar-time-bar-box-even[orient="horizontal"] {
     border-right: 1px solid ThreeDShadow;
     border-top: 1px solid ThreeDShadow;
-    -moz-border-right-colors: none;
 }
 
 .calendar-time-bar-box-odd[orient="vertical"],
 .calendar-time-bar-box-even[orient="vertical"] {
     border-bottom: 1px  transparent !important;
-    border-right: 2px solid #D2D2D2;
-    -moz-border-right-colors:  #FFFFFF #D2D2D2;
+    border-right: 1px solid #D2D2D2;
     width: 10ex; /* the same as the calendar-time-bar element */
 }
 
 window[systemcolors] .calendar-time-bar-box-odd[orient="vertical"],
 window[systemcolors] .calendar-time-bar-box-even[orient="vertical"] {
-    border-right: 2px solid ThreeDShadow;
-    -moz-border-right-colors: -moz-Field ThreeDShadow;
+    border-right: 1px solid ThreeDShadow;
 }
 
 /** End time bar **/
@@ -639,7 +627,7 @@ window[systemcolors] calendar-day-label[orient="vertical"][relation="today1day"]
 calendar-day-label[relation="today"],
 calendar-day-label[relation="today1day"] {
     border: 1px solid #67ACD8;
-    -moz-margin-end: -1px;
+    margin-inline-end: -1px;
     margin-top: -1px;
     position: relative;
 }
@@ -767,7 +755,7 @@ window[systemcolors] .calendar-month-day-box-other-month.calendar-month-day-box-
 .calendar-month-day-box-other-month[relation="today"] {
     background-color: #E1F0FD;
     border: 1px solid #7FB9EE !important;
-    -moz-margin-end: -1px !important;
+    margin-inline-end: -1px !important;
     margin-top: -1px !important;
     position: relative;
 }
@@ -830,7 +818,7 @@ window[systemcolors] .calendar-month-day-box-date-label[relation="today"][select
     text-align: right;
     margin: 0px;
     padding-top: 1px;
-    -moz-padding-end: 2px;
+    padding-inline-end: 2px;
     padding-bottom: 1px;
 }
 
@@ -863,7 +851,7 @@ calendar-month-day-box calendar-month-day-box-item[allday="true"] .calendar-colo
 }
 
 .calendar-month-day-box-item-label[time="true"] {
-    -moz-margin-end: 4px;
+    margin-inline-end: 4px;
 }
 
 .labeldaybox-container {
@@ -953,8 +941,8 @@ calendar-event-box[gripBars="both"]:not([readonly="true"]):hover .calendar-event
     text-align: right;
     margin-top: 0;
     margin-bottom: 0;
-    -moz-margin-start: 0;
-    -moz-margin-end: 1em; /* 1em space before value */
+    margin-inline-start: 0;
+    margin-inline-end: 1em; /* 1em space before value */
 }
 
 .tooltipHeaderDescription {
@@ -1042,7 +1030,6 @@ agenda-richlist-item[status="CANCELLED"] .agenda-container-box {
 #view-tabs .tabs-left,
 #view-tabs .tabs-right {
     border-bottom: 1px solid ThreeDShadow;
-	-moz-border-bottom-colors: none;
 }
 
 tab[calview] {
@@ -1071,12 +1058,12 @@ tab[calview] > .tab-middle {
 
 .view-header[type="end"] {
     text-align: right;
-    -moz-margin-end: 6px;
+    margin-inline-end: 6px;
 }
 
 .navigation-inner-box {
-    -moz-padding-start: 6px;
-    -moz-padding-end: 6px;
+    padding-inline-start: 6px;
+    padding-inline-end: 6px;
     padding-bottom: 1px;
 }
 
@@ -1094,8 +1081,8 @@ tab[calview] > .tab-middle {
 .today-navigation-button {
     -moz-user-focus: normal;
     -moz-appearance: toolbarbutton;
-    -moz-margin-start: 2px;
-    -moz-margin-end: 2px;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
     color: ButtonText;
     font-size: 14px;
 }
