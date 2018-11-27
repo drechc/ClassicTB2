@@ -289,6 +289,10 @@ treecolpicker:hover:active {
   -moz-padding-end: 1px;
 }
 
+treecols {
+  border-bottom: 1px solid ThreeDLightShadow;
+}
+
 /* ::::: column drag and drop styles ::::: */
 
 treecol[dragging="true"] {
