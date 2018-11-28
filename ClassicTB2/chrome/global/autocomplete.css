@@ -11,35 +11,15 @@
 
 /* ::::: autocomplete ::::: */
 
-/* .padded is used by autocomplete widgets that don't have an icon. Gross. -dwh */
-textbox:not(.padded) {
-  cursor: default;
-  padding: 0;
-}
-
 textbox[nomatch="true"][highlightnonmatches="true"] {
   color: red;
 }
 
-.autocomplete-textbox-container {
-  -moz-box-align: center;
-}
-
-textbox:not(.padded) .textbox-input-box {
-  margin: 0 3px;
-}
-
-.textbox-input-box {
-  -moz-box-align: center;
-}
-
 /* ::::: autocomplete popups ::::: */
 
-panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"],
 .autocomplete-history-popup {
   -moz-appearance: none;
-  border-width: 1px;
   padding: 0;
   color: -moz-FieldText;
   background-color: -moz-Field;
@@ -49,48 +29,15 @@ panel[type="autocomplete-richlistbox"],
   max-height: 180px;
 }
 
-/* ::::: tree ::::: */
-
-.autocomplete-tree {
-  -moz-appearance: none !important;
-  border: none !important;
-  background-color: transparent !important;
-}
-
-.autocomplete-treecol {
-  -moz-appearance: none !important;
-  margin: 0 !important;
-  border: none !important;
-  padding: 0 !important;
-}
-
-/* GTK calculates space for a sort arrow */
-.autocomplete-treecol > .treecol-sortdirection {
-  -moz-appearance: none !important;
-}
-
-.autocomplete-treebody::-moz-tree-cell-text {
-  padding-inline-start: 8px;
-}
-
-treechildren.autocomplete-treebody::-moz-tree-row(selected) {
- background-color: Highlight;
-}
-
-treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
-  color: HighlightText !important;
-}
-
-.autocomplete-treebody::-moz-tree-image(treecolAutoCompleteValue) {
-  max-width: 16px;
-  height: 16px;
-}
-
 /* ::::: richlistbox autocomplete ::::: */
 
 .autocomplete-richlistbox {
   -moz-appearance: none;
   margin: 0;
+}
+
+.autocomplete-richlistitem:hover {
+  background-color: hsla(0, 0%, 80%, .3);
 }
 
 .autocomplete-richlistitem[selected] {
@@ -106,52 +53,65 @@ treechildren.autocomplete-treebody::-moz-tree-cell-text(selected) {
   border-top: 1px solid ThreeDLightShadow;
 }
 
+.ac-type-icon {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
 .ac-site-icon {
+  display: none;
   width: 16px;
   height: 16px;
   margin: 0 5px -3px 3px;
+  list-style-image: url("chrome://mozapps/skin/places/defaultFavicon.png");
 }
 
-.ac-type-icon {
-  width: 16px; 
-  height: 16px;
+.ac-title {
+  margin-inline-start: 0;
+  margin-inline-end: 6px;
 }
 
-.ac-extra > .ac-result-type-tag {
-  margin: 0 4px;
+html|span.ac-tag {
+  margin-inline-start: 0;
+  margin-inline-end: 2px;
 }
 
-.ac-extra > .ac-comment {
-  padding-right: 4px;
+.ac-tags {
+  display: none;
+  margin-inline-start: 0;
+  margin-inline-end: 4px;
 }
 
-.ac-ellipsis-after {
-  margin: 2px 0px 0px 0px !important;
-  padding: 0; 
-  min-width: 1em;
+.ac-separator {
+  display: none;
+  margin-inline-start: 0;
+  margin-inline-end: 6px;
 }
 
-.ac-normal-text {
-  margin: 2px 0px 0px 0px !important;
-  padding: 0;
+.ac-url,
+.ac-action {
+  margin-inline-start: 0;
+  margin-inline-end: 6px;
+  display: none;
 }
 
-.ac-normal-text > html|span {
+/* Better align the URL/action with the title. */
+.ac-tags,
+.ac-separator,
+.ac-url,
+.ac-action {
+  margin-bottom: -2px;
+}
+
+.ac-title-text,
+.ac-tags-text,
+.ac-separator-text,
+.ac-url-text,
+.ac-action-text,
+.ac-text-overflow-container {
+  padding: 0 !important;
   margin: 0 !important;
-  padding: 0;
-}
-
-html|span.ac-emphasize-text {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-html|span.ac-emphasize-alt {
-  text-decoration: underline;
-}
-
-.ac-title, .ac-url {
-  overflow: hidden;
 }
 
 /* ::::: textboxes inside toolbarpaletteitems ::::: */

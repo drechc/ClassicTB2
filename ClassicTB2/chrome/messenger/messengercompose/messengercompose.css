@@ -842,6 +842,7 @@ toolbar[iconsize="small"] #button-print[disabled="true"] {
 /* ::::: autocomplete icons ::::: */
 
 .ac-site-icon {
+  display: -moz-box;
   margin-inline-start: 2px;
   margin-inline-end: 5px;
 }

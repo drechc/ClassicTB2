@@ -83,3 +83,19 @@
 .remote-gloda-search {
   min-height: 24px;
 }
+
+#PopupGlodaAutocomplete {
+  -moz-appearance: none;
+  margin-top: -1px;
+  background-color: -moz-Field;
+  color: -moz-FieldText;
+}
+
+#PopupGlodaAutocomplete > .autocomplete-richlistbox {
+  padding: 2px 0;
+}
+
+#PopupGlodaAutocomplete .ac-url {
+  display: -moz-box;
+  margin-bottom: 2px;
+}

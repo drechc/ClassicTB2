@@ -10,6 +10,7 @@
 @import url("chrome://messenger/content/messenger.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
 
 description.error {
   color: #FF0000;
@@ -195,4 +196,31 @@ button[type="menu-button"] {
 button[type="menu-button"] > button {
   margin: -3px;
   margin-inline-end: 0;
+}
+
+/* :::: autocomplete labels :::: */
+
+html|span.ac-emphasize-text {
+  font-weight: bold;
+}
+
+.autocomplete-richlistitem:not([ac-comment=""]) > .ac-url,
+.autocomplete-richlistitem:not([ac-comment=""]) > .ac-separator {
+  display: -moz-box;
+}
+
+.autocomplete-richlistitem:not([ac-comment=""]) > .ac-url {
+  -moz-box-ordinal-group: 1;
+}
+
+.autocomplete-richlistitem:not([ac-comment=""]) > .ac-separator {
+  -moz-box-ordinal-group: 2;
+}
+
+.autocomplete-richlistitem:not([ac-comment=""]) > .ac-title {
+  -moz-box-ordinal-group: 3;
+}
+
+.ac-url-text {
+  max-width: unset !important;
 }
