@@ -38,10 +38,6 @@
  * Tabmail Tabs
  */
 
-.tabmail-arrowscrollbox {
-  margin-bottom: -1px;
- }
-
 .tabmail-tabs[overflow="true"] {
   -moz-padding-start: 0px;
 }
@@ -60,11 +56,12 @@
 
 .tabmail-tab {
   -moz-appearance: none;
-  background: -moz-linear-gradient(bottom, rgba(10%, 10%, 10%, .4) 1px,
-              transparent 1px), -moz-linear-gradient(transparent,
-              hsla(0, 0%, 45%, .1) 1px, hsla(0, 0%, 32%, .2) 80%,
-              hsla(0, 0%, 0%, .2)),
-              -moz-linear-gradient(-moz-dialog, -moz-dialog);
+  background: -moz-linear-gradient(bottom,
+				rgba(10%, 10%, 10%, .4) 1px,
+				hsla(0, 0%, 0%, .2) 1px,
+				hsla(0, 0%, 32%, .2) 20%,
+				hsla(0, 0%, 45%, .1)),
+			  -moz-linear-gradient(-moz-dialog, -moz-dialog);
   background-origin: border-box;
   background-position: 1px 2px;
   background-size: calc(100% - 2px) calc(100% - 2px);
@@ -78,15 +75,18 @@
 }
 
 .tabmail-tab:not(:-moz-lwtheme):not([selected="true"]):hover {
-  background-image: -moz-linear-gradient(bottom, rgba(10%, 10%, 10%, .4) 1px,
-                    transparent 1px), -moz-linear-gradient(hsla(0, 0%, 100%, .3) 1px,
-                    hsla(0, 0%, 75%, .2) 80%, hsla(0, 0%, 60%, .2)),
+  background-image: -moz-linear-gradient(bottom,
+					  rgba(10%, 10%, 10%, .4) 1px,
+					  hsla(0, 0%, 60%, .2) 1px,
+                      hsla(0, 0%, 75%, .2) 20%,
+					  hsla(0, 0%, 100%, .3)),
                     -moz-linear-gradient(-moz-dialog, -moz-dialog);
 }
 
 .tabmail-tab[selected="true"]:not(:-moz-lwtheme) {
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, .7),
-                    rgba(255, 255, 255, .5) 30%),
+  background-image: -moz-linear-gradient(
+					  rgba(255, 255, 255, .7),
+                      transparent),
                     -moz-linear-gradient(-moz-dialog, -moz-dialog);
   color: -moz-dialogText;
 }
@@ -381,8 +381,6 @@ tabpanels {
 /* Content Tabs */
 .contentTabToolbox {
   -moz-appearance: none;
-  height: 0px;
-  border: 0;
 }
 
 .contentTabInstance[disablechrome] .contentTabToolbox {
@@ -391,7 +389,6 @@ tabpanels {
 
 .contentTabToolbox:not(:-moz-lwtheme) {
   height: 3px;
-  border-bottom: 1px solid rgb(105, 105, 105);
 }
 
 .contentTabToolbox:-moz-lwtheme {

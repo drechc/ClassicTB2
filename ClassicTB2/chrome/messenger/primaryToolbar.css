@@ -30,13 +30,10 @@
   -moz-box-ordinal-group: 20;
 }
 
-#tabs-toolbar[collapsed=true] {
-  visibility: inherit;
-  max-height: 1px;
-  min-height: 1px;
-}
-#tabs-toolbar[collapsed=true] * {
-  visibility: hidden;
+#tabs-toolbar {
+  background-image: linear-gradient(to top, rgba(10%, 10%, 10%, .4) 1px,
+                    transparent 1px);
+  border-bottom: none;
 }
 
 #mail-toolbar-menubar2 {
@@ -50,8 +47,7 @@
   -moz-appearance: none;
   border-top: none;
   border-bottom: 1px solid threedshadow;
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, .5),
-                    rgba(255, 255, 255, .1) 19px) !important;
+  min-height: 3px;
 }
 
 .mail-toolbox > toolbar:-moz-lwtheme,
