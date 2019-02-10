@@ -10,19 +10,19 @@
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-.alertBox {
+#alertBox {
   border: ridge #5486DA 4px;
   background-color: -moz-Dialog;
   min-height: 50px;
 }
 
-.alertBox[orient="horizontal"] > .alertImageBox {
+#alertBox[orient="horizontal"] > #alertImageBox {
   margin-inline-start: 4px;
   margin-inline-end: 6px;
   min-height: 46px;
 }
 
-.alertBox[orient="vertical"] > .alertImageBox {
+#alertBox[orient="vertical"] > #alertImageBox {
   margin-top: 6px;
   margin-bottom: 4px;
   min-width: 46px;
@@ -49,16 +49,16 @@ label {
   text-decoration: underline;
 }
 
-.alertText[clickable="true"]:hover:active {
+#alertText[clickable="true"]:hover:active {
   color: #424F63;
 }
 
-.alertBox[orient="horizontal"] > .alertTextBox {
+#alertBox[orient="horizontal"] > #alertTextBox {
   padding-inline-end: 10px;
   padding-top: 5px;
 }
 
-.alertBox[orient="vertical"] > .alertTextBox {
+#alertBox[orient="vertical"] > #alertTextBox {
   padding-inline-start: 5px;
   padding-inline-end: 5px;
   margin-bottom: 8px;
