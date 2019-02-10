@@ -116,15 +116,15 @@
 
 /* ::::: tree progress meter ::::: */
 
-.calendar-task-tree > treechildren::-moz-tree-progressmeter {
+.calendar-task-tree > treechildren[type=progressmeter] {
     border: 1px solid ThreeDShadow;
     color: Highlight;
     background-color: -moz-field;
 }
 
 @media all and (-moz-windows-default-theme) {
-  .calendar-task-tree > treechildren::-moz-tree-progressmeter(hover),
-  .calendar-task-tree > treechildren::-moz-tree-progressmeter(selected) {
+  .calendar-task-tree > treechildren[type=progressmeter]:hover,
+  .calendar-task-tree > treechildren[type=progressmeter]:active {
       margin: 1px 4px;
   }
 }

@@ -54,13 +54,13 @@ button:-moz-focusring > .button-box {
 
 /* .......... active/open/checked state .......... */
 
-button:hover:active > .button-box:-moz-system-metric(windows-classic),
-button[open="true"] > .button-box:-moz-system-metric(windows-classic),
-button[checked="true"] > .button-box:-moz-system-metric(windows-classic) {
-  padding-top: 3px;
-  padding-bottom: 2px;
-  padding-inline-start: 5px;
-  padding-inline-end: 4px;
+@media (-moz-windows-classic) {
+  button:-moz-any(:hover:active,[open="true"],[checked="true"]):not([disabled="true"]) > .button-box {
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-inline-start: 5px;
+    padding-inline-end: 4px;
+  }
 }
 
 /* .......... disabled state .......... */
@@ -69,9 +69,11 @@ button[disabled="true"] {
   color: GrayText;
 }
 
-button[disabled="true"]:-moz-system-metric(windows-classic) {
-  color: ThreeDShadow;
-  text-shadow: 1px 1px ThreeDHighlight;
+@media (-moz-windows-classic) {
+  button[disabled="true"] {
+    color: ThreeDShadow;
+    text-shadow: 1px 1px ThreeDHighlight;
+  }
 }
 
 /* ::::: menu/menu-button buttons ::::: */

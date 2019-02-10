@@ -70,9 +70,10 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
   border-bottom: 1px solid ThreeDShadow;
 }
 
-#quick-filter-bar-main-bar:-moz-system-metric(windows-default-theme),
-#quick-filter-bar-expando:-moz-system-metric(windows-default-theme) {
-  background-color: ThreeDFace;
+@media (-moz-windows-default-theme) {
+  #quick-filter-bar-main-bar, #quick-filter-bar-expando {
+    background-color: ThreeDFace;
+  }
 }
 
 #quick-filter-bar-tab-bar,
@@ -114,8 +115,10 @@ toolbox[labelalign="end"] #qfb-show-filter-bar {
   outline: none;
 }
 
-#qfb-filter-label:-moz-system-metric(windows-default-theme) {
-  color: GrayText;
+@media (-moz-windows-default-theme) {
+  #qfb-filter-label {
+    color: GrayText;
+  }
 }
 
 #qfb-sticky {

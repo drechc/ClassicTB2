@@ -44,6 +44,8 @@ calendar-list-tree > tree > treecols > treecol[hideheader="true"] {
   height: 0px;
 }
 
-calendar-list-tree > tree > treecols > treecol[anonid="scrollbar-spacer"]:-moz-system-metric(overlay-scrollbars) {
-  display: none;
+@media (-moz-overlay-scrollbars) {
+  calendar-list-tree > tree > treecols > treecol[anonid="scrollbar-spacer"] {
+    display: none;
+  }
 }
