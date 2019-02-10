@@ -63,7 +63,6 @@ menuitem.menuitem-iconic > .menu-iconic-left {
   list-style-image: url("chrome://global/skin/icons/loading_16.png");
 }
 
-#throbber-box,
 #wrapper-throbber-box > #throbber-box {
   list-style-image: url("chrome://global/skin/icons/notloading_16.png");
 }
