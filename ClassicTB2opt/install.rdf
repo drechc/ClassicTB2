@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{2A95E724-F74E-46D3-93FD-3E9850382E53}</em:id>
-    <em:version>1.5.0</em:version>
+    <em:version>1.5.1</em:version>
     <em:type>2</em:type>
     <em:name>Classic TB2 Options</em:name>
     <em:description>Options for Classic TB2 theme</em:description>
