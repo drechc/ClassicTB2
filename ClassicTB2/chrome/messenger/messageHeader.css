@@ -350,7 +350,6 @@ toolbox[labelalign="end"] toolbar[mode="full"] .msgHeaderView-button .toolbarbut
 
 .inline-toolbar {
   -moz-appearance: none;
-  -moz-box-pack: end;
   border-bottom-width: 0 !important;
 }
 
