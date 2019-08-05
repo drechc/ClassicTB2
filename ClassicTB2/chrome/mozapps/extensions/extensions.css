@@ -443,9 +443,8 @@
 }
 
 .addon[active="false"] .icon {
-  filter: url("chrome://mozapps/skin/extensions/extensions.svg#greyscale");
+  filter: grayscale(1);
 }
-
 
 .addon-view[type="theme"] .icon {
   list-style-image: url("chrome://mozapps/skin/extensions/themeGeneric.png");
