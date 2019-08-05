@@ -8,3 +8,5 @@ skin	calendar-common		ClassicTB2 jar:chrome/classic.jar!/calendar/common/
 skin	calendar			ClassicTB2 jar:chrome/classic.jar!/calendar/
 skin	lightning-common	ClassicTB2 jar:chrome/classic.jar!/lightning/common/
 skin	lightning			ClassicTB2 jar:chrome/classic.jar!/lightning/
+
+override chrome://calendar-common/skin/icons/icon32.svg		chrome://calendar/skin/cal-icon32.png
